@@ -1,0 +1,3039 @@
+% ============================================================
+% 工程光学自测练习做题本 —— 横版 Pad 版（200 mm × 150 mm）
+% 模板：ExBookie/example_text_type.tex，文档类选项 padl
+% 每题一页；图片按页高缩放；答题区高度按题型适配
+% ============================================================
+\documentclass[padl, analysis, notocnum]{ExBook}
+
+% ---- 固定高度答题区（可调） ----
+\newcommand{\answerarea}[1][3.5cm]{%
+  \par\vspace{1mm}%
+  \noindent{\color{themeColor!35}\rule{\linewidth}{0.4pt}}\par
+  \noindent\begin{minipage}[t][#1][t]{\linewidth}\vspace{0pt}\end{minipage}\par
+  \noindent{\color{themeColor!35}\rule{\linewidth}{0.4pt}}\par
+}
+\newcommand{\crosspage}{\textcolor{themeColor}{\textbf{【跨页】}}\ }
+\newcommand{\tbd}{\textcolor{red}{\textbf{【待确认】}}}
+
+\begin{document}
+
+\include{config}
+
+% ---- Pad 顶栏（模板 padl 顶栏在当前 fancyhdr 下被裁切，此处等效重绘） ----
+\chead{%
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[themeColor] (current page.north west) rectangle ++(0.70\paperwidth,-0.8cm);
+  \fill[themeColor!6.2] ([xshift=-0.30\paperwidth]current page.north east) rectangle ++(0.30\paperwidth,-0.8cm);
+  \node[anchor=west,text=white,font=\fontsize{13}{0}\selectfont\bfseries]
+    at ([xshift=4mm,yshift=-4mm]current page.north west) {工程光学自测练习做题本};
+  \node[anchor=east,text=themeColor,font=\fontsize{8}{0}\selectfont\bfseries]
+    at ([xshift=-4mm,yshift=-4mm]current page.north east) {第 \thepage\ 页\ /\ 共 \pageref{LastPage}\ 页};
+  \draw[line width=1.2pt,color=themeColor] (current page.north west) ++(0,-0.8cm) -- ++(\paperwidth,0);
+\end{tikzpicture}}
+\fancyfoot{}
+
+\section{第一章\quad 几何光学的基本定律与成像概念}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 下面关于几何光学传播定律的正确陈述是
+\par\noindent\hspace{2em}\ding{172}在均匀介质中，光是沿直线传播的。
+\par\noindent\hspace{2em}\ding{173}若光线从光疏介质进入光密介质中，有可能产生光的全反射现象。
+\par\noindent\hspace{2em}\ding{174}各种波长的光在真空中的传播速度是相同的。
+\par\noindent\hspace{2em}\ding{175}费马原理指出，光沿着光程为极值的路径传播。
+\label{q:1:start}
+\answerarea[4.0cm]
+\label{q:1:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 下面关于物像及其相关概念的正确陈述是
+\par\noindent\hspace{2em}\ding{172}可以用屏直接接收的物（像）即为实物（像），不能用屏直接接收的物（像）即为虚物（像）。
+\par\noindent\hspace{2em}\ding{173}成像系统将实际三维空间分成物空间和像空间两个独立的部分。
+\par\noindent\hspace{2em}\ding{174}实物、虚像对应发散同心光束，虚物、实像对应会聚同心光束。
+\par\noindent\hspace{2em}\ding{175}位于成像系统左侧的实际光线是物空间光线，位于成像系统右侧的实际光线是像空间光线。
+\label{q:2:start}
+\answerarea[4.0cm]
+\label{q:2:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 下面关于单个折射球面的正确陈述是
+\par\noindent\hspace{2em}\ding{172}物点发出的同心光束经过单个折射球面后仍为同心光束。
+\par\noindent\hspace{2em}\ding{173}若$n'<n$，则无限远轴上点的共轭像点必位于球面曲率中心的异侧。
+\par\noindent\hspace{2em}\ding{174}若$n'>n$，则无限远轴上物点经单个折射球面后成虚像。
+\par\noindent\hspace{2em}\ding{175}若$n'>n$，当$n'$变小时，无限远轴上点的共轭像点向球面顶点方向移动。
+\label{q:3:start}
+\answerarea[4.0cm]
+\label{q:3:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 一个物体经单个折射球面成像时，其垂轴放大率$\beta >1$，且已知$n'<n$，则
+\par\noindent\hspace{2em}\ding{172}物像位于该折射球面的同侧。
+\par\noindent\hspace{2em}\ding{173}角放大率$\gamma >0$。
+\par\noindent\hspace{2em}\ding{174}像高大于物高。
+\par\noindent\hspace{2em}\ding{175}该折射球面能把入射光束变窄。
+\label{q:4:start}
+\answerarea[4.0cm]
+\label{q:4:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 一个物方、像方折射率相同的折射光学系统对实物成像时，其垂轴放大率$-1<\beta <0$，则
+\par\noindent\hspace{2em}\ding{172}成正立放大的虚像。
+\par\noindent\hspace{2em}\ding{173}成倒立缩小的虚像。
+\par\noindent\hspace{2em}\ding{174}成倒立缩小的实像。
+\par\noindent\hspace{2em}\ding{175}成正立缩小的实像。
+\label{q:5:start}
+\answerarea[4.0cm]
+\label{q:5:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 一个物体经反射球面成像时，其垂轴放大率$\beta >0$，则
+\par\noindent\hspace{2em}\ding{172}物像位于系统的同侧。
+\par\noindent\hspace{2em}\ding{173}物像虚实性质相反。
+\par\noindent\hspace{2em}\ding{174}角放大率$\gamma >0$。
+\par\noindent\hspace{2em}\ding{175}轴向放大率$\alpha <0$。
+\label{q:6:start}
+\answerarea[4.0cm]
+\label{q:6:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 凸面反射镜对实物只能
+\par\noindent\hspace{2em}\ding{172}成倒立放大的实像。
+\par\noindent\hspace{2em}\ding{173}成正立缩小的虚像。
+\par\noindent\hspace{2em}\ding{174}成正立放大的实像。
+\par\noindent\hspace{2em}\ding{175}成倒立缩小的实像。
+\label{q:7:start}
+\answerarea[4.0cm]
+\label{q:7:end}
+\end{qitems}
+
+\subsection{三、计算题}
+\begin{qitems}[startnum=1]
+\qitem 为了从坦克内部观察外边目标，需要在坦克壁上开一个孔，假定坦克壁厚为$200\,\mathrm{mm}$，孔宽为$120\,\mathrm{mm}$，在孔内安装一块折射率$n=1.5163$的玻璃，厚度与装甲厚度相同，问在允许观察者眼睛左右移动的条件下，能看到外界多大的角度范围？
+\label{q:8:start}
+\answerarea[7.0cm]
+\label{q:8:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 折射率为$n_{1}=1.4$，$n_{2}=1.6$，$n_{3}=1$的三种介质被两平行分界面分开，试求在第二介质中发生全反射时，光线在第一分界面上的入射角。
+\label{q:9:start}
+\answerarea[7.0cm]
+\label{q:9:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 在圆柱形的木塞中心垂直插入一根大头针，然后把木塞倒放到水面上，调节针插入木塞的深度，使观察者在水面上方不论什么位置都刚好看不到水下的大头针。如果测得大头针露出来的长度为 h，木塞直径为 d，求水的折射率 n。
+\label{q:10:start}
+\answerarea[7.0cm]
+\label{q:10:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 在公路的转弯处设置一个凸球面反射镜，有一人身高$1.75m$，在凸球面镜前$1.75m$处，此人经过凸球面镜所成像在镜后$0.1m$处，求此人经凸球面镜所成的像高 y 和凸球面镜曲率半径 r。
+\label{q:11:start}
+\answerarea[7.0cm]
+\label{q:11:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 如图 1-8 所示，一个凹面反射镜 A 的曲率半径为$200\,\mathrm{mm}$，另一个凸面反射镜 B 的曲率半径为$500\,\mathrm{mm}$，两镜面相对地放置在相距$200\,\mathrm{mm}$的光轴上，一物体高$40\,\mathrm{mm}$垂直位于 A、B 之间的光轴上，物体距 A 150mm，求：（1）先经 A，后经 B 所成像的位置和大小；（2）先经B 后经 A 所成像的位置和大小。
+\imgin[0.32]{}{figures/fig-000.jpg}
+\label{q:12:start}
+\answerarea[2.4cm]
+\label{q:12:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 为了把仪器上的刻度放大 2 倍，在它的上面放一平凸透镜，并让透镜的平面与刻度紧贴。假设刻度与球面顶点距离为$30\,\mathrm{mm}$，玻璃的折射率为 1.5，求凸面的半径应为多少？
+\label{q:13:start}
+\answerarea[7.0cm]
+\label{q:13:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 一个透明玻璃小球的半径为$15\,\mathrm{mm}$，折射率为 1.720，将它浸没在折射率为 1.360 的透明液体里。若液体中有一束平行光入射到小球上，求这束平行光将在小球的另一侧何处聚焦？
+\label{q:14:start}
+\answerarea[7.0cm]
+\label{q:14:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 一个玻璃空盒的两端是共轴球面，一端是半径$r_{1}=-16.5\,\mathrm{mm}$的凹面，另一端是半径$r_{2}=16.5\,\mathrm{mm}$的凹面，两顶点间的距离为$18.5\,\mathrm{mm}$。将盒在空气中密闭后放入水中。一高为$10\,\mathrm{mm}$的物体距前凹球面的顶点为$100\,\mathrm{mm}$。求物体经玻璃盒所成的像。（假设玻璃盒的厚度可以忽略不计。）
+\label{q:15:start}
+\answerarea[7.0cm]
+\label{q:15:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 一束平行光垂直入射到平凸透镜上（透镜的第 1 面为平面），会聚于透镜后$480\,\mathrm{mm}$处，如在此透镜凸面上镀银，则平行光会聚于透镜前$80\,\mathrm{mm}$处。按薄透镜处理，求透镜折射率和凸面曲率半径。
+\label{q:16:start}
+\answerarea[7.0cm]
+\label{q:16:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 一束平行细光束入射到一个半径$r=30\,\mathrm{mm}$、折射率$n=1.5$的玻璃球上，求其会聚点的位置。若将一个半径相同但表面镀反射膜的玻璃球紧放置时（见图 1-9），反射光束经玻璃球折射后，会聚点又在何处，说明两个会聚点的虚实，并画图验证。
+\label{q:17:start}
+\answerarea[7.0cm]
+\label{q:17:end}
+\end{qitems}
+
+\section{第二章\quad 理想光学系统}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 有一个无限远物点，经某一理想光学系统成像，则正确的陈述是
+\par\noindent\hspace{2em}\ding{172}其像点必在理想光学系统的像方焦点处。
+\par\noindent\hspace{2em}\ding{173}其像点必在理想光学系统的像方焦平面上。
+\par\noindent\hspace{2em}\ding{174}该物点与像方无穷远点共轭。
+\par\noindent\hspace{2em}\ding{175}该物点与其像点可作为此理想光学系统的一对常用基点。
+\label{q:18:start}
+\answerarea[4.0cm]
+\label{q:18:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 有一个$f'>0$的理想光学系统，则：
+\par\noindent\hspace{2em}\ding{172}节点与主点总是重合。
+\par\noindent\hspace{2em}\ding{173}像方主点位于像方焦点左侧。
+\par\noindent\hspace{2em}\ding{174}对平行光束起会聚作用。
+\par\noindent\hspace{2em}\ding{175}共轭光线在主面上的投射高度相等。
+\label{q:19:start}
+\answerarea[4.0cm]
+\label{q:19:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 如图 2-11 所示，有一个$f'<0$的理想光学系统置于空气中，$l=2f'$，试找出下面正确的光路图。
+\imgin[0.13]{}{figures/fig-001.jpg}
+\label{q:20:start}
+\answerarea[1.6cm]
+\label{q:20:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 如图 2-12 所示，有一个$f'>0$的理想光学系统置于空气中，$l=-2f'$，试找出下面正确的光路图。
+\imgin[0.12]{}{figures/fig-002.jpg}
+\label{q:21:start}
+\answerarea[1.6cm]
+\label{q:21:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 有一个置于空气中的理想光学系统，其垂轴放大率$\beta >0$，则
+\par\noindent\hspace{2em}\ding{172}物像位于系统的同侧。
+\par\noindent\hspace{2em}\ding{173}角放大率$\gamma >0$。
+\par\noindent\hspace{2em}\ding{174}像高大于物高。
+\par\noindent\hspace{2em}\ding{175}光学系统的焦距为正。
+\label{q:22:start}
+\answerarea[4.0cm]
+\label{q:22:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 一物体经理想光学系统后成放大的实像，当物体向光学系统方向移动一微小距离时
+\par\noindent\hspace{2em}\ding{172}其像变大。
+\par\noindent\hspace{2em}\ding{173}垂轴放大率$\beta$的绝对值变小。
+\par\noindent\hspace{2em}\ding{174}角放大率的绝对值变小。
+\par\noindent\hspace{2em}\ding{175}轴向放大率$\alpha$的绝对值变小。
+\label{q:23:start}
+\answerarea[4.0cm]
+\label{q:23:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 理想光学系统的角放大率
+\par\noindent\hspace{2em}\ding{172}反映了理想光学系统能够把光束变宽或变窄的能力。
+\par\noindent\hspace{2em}\ding{173}角放大率的大小取决于物像共轭面位置。
+\par\noindent\hspace{2em}\ding{174}改变理想光学系统物像方折射率的大小，角放大率值不变。
+\par\noindent\hspace{2em}\ding{175}垂轴放大率$\beta$值越大，角放大率值越小。
+\label{q:24:start}
+\answerarea[4.0cm]
+\label{q:24:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 有一个$f'<0$的理想光学系统，其像方折射率$n'$大于物方折射率 n，则
+\par\noindent\hspace{2em}\ding{172}像方焦距$f'$的值大于物方焦距 f 的值。
+\par\noindent\hspace{2em}\ding{173}物方节点位于物方焦点的右侧。
+\par\noindent\hspace{2em}\ding{174}像方节点位于像方主点的左侧。
+\par\noindent\hspace{2em}\ding{175}两节点间的距离与两主点间的距离相等。
+\label{q:25:start}
+\answerarea[4.0cm]
+\label{q:25:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 将两个焦距分别为$f_{1}$和$f_{2}$的已知光组组合在一起
+\par\noindent\hspace{2em}\ding{172}若$f_{1}$和$f_{2}$均为正值，则组合后的光组焦距$f'$为正。
+\par\noindent\hspace{2em}\ding{173}当光学间隔$\Delta =0$时，组合后光组的光焦度为 0。
+\par\noindent\hspace{2em}\ding{174}当光学间隔$\Delta$增大时，组合后光组的焦距值变小。
+\par\noindent\hspace{2em}\ding{175}当两光组密接时，组合光组的焦距$f'=f_{1}+f_{2}$。
+\label{q:26:start}
+\answerarea[4.0cm]
+\label{q:26:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 在以下光组组合中，不论间隔如何改变，光焦度的符号都不会改变的是
+\par\noindent\hspace{2em}\ding{172}两个正薄透镜组合。
+\par\noindent\hspace{2em}\ding{173}两个负薄透镜组合。
+\par\noindent\hspace{2em}\ding{174}一个正薄透镜和一个负薄透镜组合。
+\par\noindent\hspace{2em}\ding{175}以上都不对。
+\label{q:27:start}
+\answerarea[4.0cm]
+\label{q:27:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 一个正透镜和一个负透镜组合而成的远摄型光组
+\par\noindent\hspace{2em}\ding{172}光组中正透镜在前，负透镜在后，且它们的间隔可以为任意值。
+\par\noindent\hspace{2em}\ding{173}若光组中只有负透镜的焦距变化时，随着负透镜焦距的变短，光组组合焦距增大。
+\par\noindent\hspace{2em}\ding{174}若光组中只有正透镜的焦距变化时，随着正透镜焦距值变长，光组组合焦距增大。
+\par\noindent\hspace{2em}\ding{175}若光组中只有两透镜的间隔变化时，随着两透镜间隔的变小，光组组合焦距增大。
+\label{q:28:start}
+\answerarea[4.0cm]
+\label{q:28:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 在使用平行光管测量物镜焦距的实验中
+\par\noindent\hspace{2em}\ding{172}平行光管的作用是提供一组与光轴成已知角度的平行光线。
+\par\noindent\hspace{2em}\ding{173}实验调整中应保证平行光管、待测物镜和测微目镜沿轴方向上有确定的位置。
+\par\noindent\hspace{2em}\ding{174}平行光管焦距选择与待测物镜的焦距范围有关，当待测物镜的焦距值较大时，应选用短焦距的平行光管。
+\par\noindent\hspace{2em}\ding{175}当平行光管参数一定时，对于珀罗板上的同一对刻线，通过待测物镜所成的像越大，说明其焦距越长。
+\label{q:29:start}
+\answerarea[4.0cm]
+\label{q:29:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 双凸透镜
+\par\noindent\hspace{2em}\ding{172}一定是正透镜。
+\par\noindent\hspace{2em}\ding{173}两个主面均位于透镜内。
+\par\noindent\hspace{2em}\ding{174}其两个面的曲率半径都大于 0。
+\par\noindent\hspace{2em}\ding{175}以上说法全不正确。
+\label{q:30:start}
+\answerarea[4.0cm]
+\label{q:30:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 一个$f'>0$的理想光学系统，其物方折射率 n 大于像方折射率$n'$，则像方节点相对于像方焦点的距离是（\hspace{1.6em}），且位于像方主点的（\hspace{1.6em}）侧。
+\label{q:31:start}
+\answerarea[4.0cm]
+\label{q:31:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 一个折射率为 1.52 的双凸薄透镜，其中一个折射面的曲率半径是另一个折射面的 2 倍，且其焦距为$5\,\mathrm{cm}$，则这两个折射面的曲率半径分别是（\hspace{1.6em}）cm 和（\hspace{1.6em}）cm。
+\label{q:32:start}
+\answerarea[4.0cm]
+\label{q:32:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 一个薄透镜折射率为 1.5，光焦度为 500D。将它浸入某液体，光焦度变成-1.00D，则此液体的折射率为（\hspace{1.6em}）。
+\label{q:33:start}
+\answerarea[4.0cm]
+\label{q:33:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 反远距型光组由（\hspace{1.6em}）和（\hspace{1.6em}）组成，其特点是（\hspace{1.6em}），因此该组合系统常用在（\hspace{1.6em}）的设计中。
+\label{q:34:start}
+\answerarea[4.0cm]
+\label{q:34:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 远摄型光组由一个（\hspace{1.6em}）和一个（\hspace{1.6em}）组成，其主要特点是（\hspace{1.6em}）。
+\label{q:35:start}
+\answerarea[4.0cm]
+\label{q:35:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 空气中的薄透镜，其主点位置位于（\hspace{1.6em}），当物体与主平面重合时，轴向放大率$\alpha$等于（\hspace{1.6em}）。
+\label{q:36:start}
+\answerarea[4.0cm]
+\label{q:36:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 空气中光焦度为$\Phi$（$\Phi \geq 0$）的薄透镜置于水中成像时，其光焦度值将（\hspace{1.6em}），会聚能力将（\hspace{1.6em}）。
+\label{q:37:start}
+\answerarea[4.0cm]
+\label{q:37:end}
+\end{qitems}
+
+\subsection{三、计算题}
+\begin{qitems}[startnum=1]
+\qitem 已知照相物镜的焦距$f'=75\,\mathrm{mm}$，被摄景物位于（以 F 点为坐标原点）$l=-\infty$、$-10m$、$-8m$、$-6m$、$-4m$、$-2m$处，试求照相底片应分别放在离物镜的像方焦面多远的地方。
+\label{q:38:start}
+\answerarea[7.0cm]
+\label{q:38:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 离水面$1m$深处有一条鱼，现用$f'=75\,\mathrm{mm}$的照相物镜拍摄该鱼，照相物镜的物方焦点离水面$1m$。试求：（1）垂轴放大率。（2）照相底片离照相物镜像方焦点$F'$多远？
+\label{q:39:start}
+\answerarea[7.0cm]
+\label{q:39:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 已知一个透镜把物体成像为放大$-3\times$的实像。当透镜向物体移近$18\,\mathrm{mm}$时，物体将被成像为放大$-4\times$的实像，试求透镜的焦距，并用图解法校核之。
+\label{q:40:start}
+\answerarea[7.0cm]
+\label{q:40:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 有一个正薄透镜对某一物成倒立的实像，像高为物高的一半，今将物体向透镜移近$100\,\mathrm{mm}$，则所得实像与物大小相等，求该正透镜组的焦距。
+\label{q:41:start}
+\answerarea[7.0cm]
+\label{q:41:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 一个正透镜焦距为$100\,\mathrm{mm}$，一个指针长$40\,\mathrm{mm}$，沿透镜的光轴放置，指针中点距离透镜$200\,\mathrm{mm}$。求：（1）指针像的长短。（2）指针绕中心转$90^{\circ}$时，它的成像位置和大小。
+\label{q:42:start}
+\answerarea[7.0cm]
+\label{q:42:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 一个短焦距物镜，已知其焦距为$35\,\mathrm{mm}$，筒长$L=65\,\mathrm{mm}$，工作距离$l_{F}'=50\,\mathrm{mm}$，按最简单的薄透镜系统考虑，求系统结构。
+\label{q:43:start}
+\answerarea[7.0cm]
+\label{q:43:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 已知一个透镜$r_{1}=-200\,\mathrm{mm}$，$r_{2}=-300\,\mathrm{mm}$，$d=50\,\mathrm{mm}$，$n=1.5$，求其焦距、光焦度和基点位置。
+\label{q:44:start}
+\answerarea[7.0cm]
+\label{q:44:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 一个对称的双凸薄透镜置于空气中，焦距为$120\,\mathrm{mm}$。透镜材料的折射率是 1.5。（1）试求这双凸薄透镜表面的曲率半径。（2）如将该透镜置于折射率为 1.62 的液体中，求这时该系统的焦距。
+\label{q:45:start}
+\answerarea[7.0cm]
+\label{q:45:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 有一平凸透镜，中心厚$3\,\mathrm{mm}$，采用 K9 玻璃$(n=1.5163)$制成。若将凸面对准$1\,\mathrm{km}$远的霓虹灯，则在平面后$15\,\mathrm{mm}$处可得到清晰实像。试求凸面曲率半径。
+\label{q:46:start}
+\answerarea[7.0cm]
+\label{q:46:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 由两个薄透镜组成一个成像系统，两薄透镜组焦距分别为$f_{1}$、$f_{2}$，间隔为 d，物平面位于第一透镜组的焦平面上，求此系统的垂轴放大率、焦距及基点位置的表达式。
+\label{q:47:start}
+\answerarea[7.0cm]
+\label{q:47:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 由已知$f_{1}'=50\,\mathrm{mm}$，$f_{2}'=-150\,\mathrm{mm}$的两个薄透镜组成的光学系统，对一个实物成一个放大 4 倍的实像，并且第一透镜的放大率$\beta_{1}=-2\times$，试求：（1）两透镜的间隔。（2）物像之间的距离。（3）保持物面位置不变，移动第一透镜至何处时，仍能在原像面位置得到物体的清晰像？与此相应的垂轴放大率为多大？
+\label{q:48:start}
+\answerarea[7.0cm]
+\label{q:48:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 有一个光学系统，已知$f'=-f=100\,\mathrm{mm}$，总厚度（第一面到最后一面的距离）为$15\,\mathrm{mm}$，$l_{F}'=96\,\mathrm{mm}$，$l_{F2}=-97\,\mathrm{mm}$，求此系统对实物成放大 10 倍的实像时，物距（离第一面）l、像距（离最后一面）$l'_{k}$及物像共轭距 L 各为多少？
+\label{q:49:start}
+\answerarea[7.0cm]
+\label{q:49:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 有一个三片型光学系统，已知：$f_{1}=100\,\mathrm{mm}$，$f_{2}'=-250\,\mathrm{mm}$，$f_{3}=800\,\mathrm{mm}$，入射平行光在三个透镜上的入射高度分别为：$h_{1}=1.5\,\mathrm{mm}$，$h_{2}=1\,\mathrm{mm}$，$h_{3}=0.9\,\mathrm{mm}$，试求合成焦距$f'$和间隔$d_{1}$、$d_{2}$的值。
+\label{q:50:start}
+\answerarea[7.0cm]
+\label{q:50:end}
+\end{qitems}
+
+\section{第三章\quad 平面与平面系统}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 白光倾斜入射到一块平行平板上，则
+\par\noindent\hspace{2em}\ding{172}各种色光在平行平板内部即发生色散。
+\par\noindent\hspace{2em}\ding{173}出射光线和入射光线平行。
+\par\noindent\hspace{2em}\ding{174}出射光线的侧移量与折射率、入射角和平行平板的厚度有关。
+\par\noindent\hspace{2em}\ding{175}其特性可用来测量玻璃的折射率。
+\label{q:51:start}
+\answerarea[4.0cm]
+\label{q:51:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 自行车的尾灯采用反射棱镜的原理制成。尾灯虽然本身不发光，但在夜间骑行时，它可将后面汽车发出的强光反射回去，使汽车司机注意到前面有自行车。尾灯的主截面如图 3-24 所示，以下说法正确的是
+\par\noindent\hspace{2em}\ding{172}汽车的灯光应从左边射过来在尾灯的左表面发生全反射。
+\par\noindent\hspace{2em}\ding{173}汽车的灯光应从右边射过来在尾灯的左表面发生全反射。
+\par\noindent\hspace{2em}\ding{174}汽车的灯光应从左边射过来在尾灯的右表面发生全反射。
+\par\noindent\hspace{2em}\ding{175}汽车的灯光应从右边射过来在尾灯的右表面发生全反射。
+\imgin[0.24]{}{figures/fig-003.jpg}
+\label{q:52:start}
+\answerarea[1.6cm]
+\label{q:52:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 以下光学系统能成与物一致完善像的有
+\par\noindent\hspace{2em}\ding{172}斜方棱镜
+\par\noindent\hspace{2em}\ding{173}直角屋脊棱镜
+\par\noindent\hspace{2em}\ding{174}望远物镜加转像棱镜
+\par\noindent\hspace{2em}\ding{175}双平面镜
+\label{q:53:start}
+\answerarea[4.0cm]
+\label{q:53:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 一细束红光和一细束蓝光平行入射到一个折射棱镜上，经折射后会聚于光屏上同一点 M，如图 3-25 所示。设两束光的折射率分别为 na 和 nb，以下说法中正确的是：
+\par\noindent\hspace{2em}\ding{172}$na<nb$，a 为红光，b 为蓝光。
+\par\noindent\hspace{2em}\ding{173}$na<nb$，a 为蓝光，b 为红光。
+\par\noindent\hspace{2em}\ding{174}$na>nb$，a 为红光，b 为蓝光。
+\par\noindent\hspace{2em}\ding{175}$na>nb$，a 为蓝光，b 为红光。
+\imgin[0.29]{}{figures/fig-004.jpg}
+\label{q:54:start}
+\answerarea[1.6cm]
+\label{q:54:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 反射棱镜在光学系统中的主要作用有（\hspace{1.6em}）、（\hspace{1.6em}）和转像、倒像等，在光路中可等效为平行平板加（\hspace{1.6em}）。
+\label{q:55:start}
+\answerarea[4.0cm]
+\label{q:55:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 某种波长的光入射到顶角为$60^{\circ}$的折射棱镜，测得最小偏向角为$42^{\circ}15'$，则该种玻璃对于入射波长的折射率为（\hspace{1.6em}）。
+\label{q:56:start}
+\answerarea[4.0cm]
+\label{q:56:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 唯一能成完善像的光学元器件是（\hspace{1.6em}），利用其旋转特性可制作光学杠杆进行放大测量；利用双光楔也可以实现（\hspace{1.6em}）的测量，主要有（\hspace{1.6em}）和（\hspace{1.6em}）两种形式。
+\label{q:57:start}
+\answerarea[4.0cm]
+\label{q:57:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 用于制作光学零件的光学材料包括光学玻璃、（\hspace{1.6em}）和（\hspace{1.6em}）三类。选用光学玻璃时的两个重要参数是（\hspace{1.6em}）和（\hspace{1.6em}）。
+\label{q:58:start}
+\answerarea[4.0cm]
+\label{q:58:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 一个右手坐标的虚物，经一个直角屋脊棱镜反射后，成（\hspace{1.6em}）坐标的（\hspace{1.6em}）像。
+\label{q:59:start}
+\answerarea[4.0cm]
+\label{q:59:end}
+\end{qitems}
+
+\subsection{三、问答或画图}
+\begin{qitems}[startnum=1,suffix={*}]
+\qitem[][.] 如图 3-26 所示，图 a 中一个单光楔在物镜前沿光轴移动；图 b 中一个双光楔在物镜前绕光轴等速相对转动；图 c 中一块平行平板在物镜前绕光轴转动。问无限远轴上物点通过这三个系统后的像点位置有什么变化？
+\par\noindent\tbd
+\imgin[0.13]{}{figures/fig-006.jpg}
+\label{q:60:start}
+\answerarea[2.4cm]
+\label{q:60:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 判断如图 3-27 所示棱镜或棱镜系统的转像情况，画出相应的输出坐标系。
+\par\noindent\tbd
+\imgin[0.14]{}{figures/fig-008.jpg}
+\label{q:61:start}
+\answerarea[2.4cm]
+\label{q:61:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3,suffix={*}]
+\qitem[][.] 一成像光学系统如图 3-28 所示，虚线框中为一个棱镜，其物、像方坐标系分别为 oxyz 和$o'x'y'z'$。试确定在虚线框中应选用何种棱镜（请在图中绘出），并说明理由。
+\par\noindent\tbd
+\imgin[0.17]{}{figures/fig-010.jpg}
+\label{q:62:start}
+\answerarea[2.4cm]
+\label{q:62:end}
+\end{qitems}
+
+\subsection{四、计算题}
+\begin{qitems}[startnum=1]
+\qitem 如图 3-29 所示，长$1m$的平面镜挂在墙上，镜的上边离地$2m$，一个人立于镜前，其眼离地$2.5m$，离墙$1.5m$。求此人能在镜内看到的地面上最近和最远点分别离墙的距离。
+\imgin[0.21]{}{figures/fig-011.jpg}
+\label{q:63:start}
+\answerarea[2.4cm]
+\label{q:63:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 如图 3-30 所示，一平面镜置于充满水的容器的底部，人俯视平面镜看自己的像，设眼睛高出水面$h_{1}=10\,\mathrm{cm}$，而镜子在水面之下深$h_{2}=66.5\,\mathrm{cm}$。试求眼睛在镜子中看起来与眼睛的距离（水的折射率为$4/3$）。
+\imgin[0.22]{}{figures/fig-012.jpg}
+\label{q:64:start}
+\answerarea[2.4cm]
+\label{q:64:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 夹角为$35^{\circ}$的双平面反射镜系统，当光线以多大的入射角入射于其中一个平面镜时，其反射光线再经另一平面镜反射后，将沿原光路反向射出？
+\label{q:65:start}
+\answerarea[7.0cm]
+\label{q:65:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 如图 3-31 所示，两平面镜夹角为$\alpha$，一束光线入射，经两次反射后出射。试证明：出射光线的偏向角与入射方向无关，恒等于$2\alpha$。
+\imgin[0.47]{}{figures/fig-013.jpg}
+\label{q:66:start}
+\answerarea[2.4cm]
+\label{q:66:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 如图 3-32 所示，有两个平面反射镜$M_{1}$和$M_{2}$，其夹角为$\alpha$。在两个反射镜之间有一条光线以$42^{\circ}$入射到$M_{1}$上，经过 4 次反射后，其反射光线与$M_{2}$平行，求$\alpha$的大小。
+\imgin[0.38]{}{figures/fig-014.jpg}
+\label{q:67:start}
+\answerarea[2.4cm]
+\label{q:67:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 有一等边折射棱镜，其折射率为 1.52，求光线经该棱镜的两个折射面折射后产生最小偏向角时的最小偏向角值和入射角。
+\label{q:68:start}
+\answerarea[7.0cm]
+\label{q:68:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem （1）已知某三棱镜的顶角为$60^{\circ}$，在空气中测得最小偏向角$53^{\circ}14'$，求此棱镜材料的折射率。（2）一顶角为$50^{\circ}$的三棱镜，在空气中测得最小偏向角为$35^{\circ}$，如果将它浸在水中，试求最小偏向角等于多少（水的折射率为 1.33）？
+\label{q:69:start}
+\answerarea[7.0cm]
+\label{q:69:end}
+\end{qitems}
+
+\section{第四章\quad 光学系统中的光束限制}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 光学系统中与孔径光阑共轭的是
+\par\noindent\hspace{2em}\ding{172}视场光阑
+\par\noindent\hspace{2em}\ding{173}像平面
+\par\noindent\hspace{2em}\ding{174}出射光瞳
+\par\noindent\hspace{2em}\ding{175}出射窗
+\label{q:70:start}
+\answerarea[4.0cm]
+\label{q:70:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 在光学系统中，有共轭关系的是
+\par\noindent\hspace{2em}\ding{172}入瞳和出瞳
+\par\noindent\hspace{2em}\ding{173}入窗和出窗
+\par\noindent\hspace{2em}\ding{174}物方主点和像方主点
+\par\noindent\hspace{2em}\ding{175}物方焦点和像方焦点
+\label{q:71:start}
+\answerarea[4.0cm]
+\label{q:71:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 在光学系统中，有共轭关系的光线是：
+\par\noindent\hspace{2em}\ding{172}经过物方主点和经过像方主点的光线。
+\par\noindent\hspace{2em}\ding{173}经过物方节点和经过像方节点且相互平行的光线。
+\par\noindent\hspace{2em}\ding{174}经过物方焦点和经过像方焦点的光线。
+\par\noindent\hspace{2em}\ding{175}经过入瞳上边缘和经过出瞳上边缘的光线。
+\label{q:72:start}
+\answerarea[4.0cm]
+\label{q:72:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 与理想光学系统相比，实际光学系统的成像光束口径和成像范围都受到限制，多数系统存在渐晕现象。
+\par\noindent\hspace{2em}\ding{172}渐晕是由于孔径光阑的拦光作用而产生的。
+\par\noindent\hspace{2em}\ding{173}渐晕使成像平面的照度不均匀。
+\par\noindent\hspace{2em}\ding{174}轴外点成像光束的宽度不只与孔径光阑有关，而且和渐晕光阑有关。
+\par\noindent\hspace{2em}\ding{175}孔径光阑的位置影响轴上点成像光束的选择。
+\label{q:73:start}
+\answerarea[4.0cm]
+\label{q:73:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 物方远心光路具有下列属性：
+\par\noindent\hspace{2em}\ding{172}物方主光线通过物方焦点。
+\par\noindent\hspace{2em}\ding{173}像方主光线通过像方焦点。
+\par\noindent\hspace{2em}\ding{174}物方主光线平行于光轴。
+\par\noindent\hspace{2em}\ding{175}像方主光线平行于光轴。
+\label{q:74:start}
+\answerarea[4.0cm]
+\label{q:74:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 在生物显微镜系统中加入场镜后，将会出现下列哪种情况？
+\par\noindent\hspace{2em}\ding{172}系统的放大率不变。
+\par\noindent\hspace{2em}\ding{173}出瞳距变大。
+\par\noindent\hspace{2em}\ding{174}在保证相同渐晕系数的情况下，目镜的通光口径变小。
+\par\noindent\hspace{2em}\ding{175}在保证相同渐晕系数的情况下，物镜的通光口径变小。
+\label{q:75:start}
+\answerarea[4.0cm]
+\label{q:75:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 在显微系统中加入不同焦距的场镜后，会给系统带来如下影响：
+\par\noindent\hspace{2em}\ding{172}场镜的焦距越短，在保证相同渐晕系数的情况下，目镜的通光口径会越小。
+\par\noindent\hspace{2em}\ding{173}场镜的焦距越短，在保证相同渐晕系数的情况下，物镜的通光口径会越小。
+\par\noindent\hspace{2em}\ding{174}场镜的焦距越短，出瞳尺寸会越大。
+\par\noindent\hspace{2em}\ding{175}场镜的焦距越短，系统的放大率会越大。
+\label{q:76:start}
+\answerarea[4.0cm]
+\label{q:76:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 在望远系统中加入场镜后，与原系统相比不变的量是：
+\par\noindent\hspace{2em}\ding{172}像方视场角
+\par\noindent\hspace{2em}\ding{173}视觉放大率$\Gamma$
+\par\noindent\hspace{2em}\ding{174}出瞳距
+\par\noindent\hspace{2em}\ding{175}出瞳的大小
+\label{q:77:start}
+\answerarea[4.0cm]
+\label{q:77:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 限制轴上物点成像光束宽度的光阑是（\hspace{1.6em}），而（\hspace{1.6em}）在其基础上进一步限制轴外物点的成像光束宽度。
+\label{q:78:start}
+\answerarea[4.0cm]
+\label{q:78:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 入瞳中心对入射窗边缘的张角是（\hspace{1.6em}），轴上像点对出瞳边缘的连线与光轴的夹角是（\hspace{1.6em}）。
+\label{q:79:start}
+\answerarea[4.0cm]
+\label{q:79:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 为减少测量误差，测量仪器一般采用（\hspace{1.6em}）光路。
+\label{q:80:start}
+\answerarea[4.0cm]
+\label{q:80:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 光学系统中置于实像或实像面附近的透镜被称为（\hspace{1.6em}）。
+\label{q:81:start}
+\answerarea[4.0cm]
+\label{q:81:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 测量显微镜的孔径光阑放置在（\hspace{1.6em}），视场光阑放置在（\hspace{1.6em}）；如果用$1/2$的 CCD接收图像并用$14''$的监视器观察图像，要求系统放大倍率为 140 倍，则显微物镜的放大倍率为（\hspace{1.6em}）。
+\label{q:82:start}
+\answerarea[4.0cm]
+\label{q:82:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 在带分划板的开普勒望远镜中，（\hspace{1.6em}）是孔径光阑，（\hspace{1.6em}）是视场光阑，（\hspace{1.6em}）是渐晕光阑；若存在渐晕，则（\hspace{1.6em}）。
+\label{q:83:start}
+\answerarea[4.0cm]
+\label{q:83:end}
+\end{qitems}
+
+\subsection{三、画图或计算}
+\begin{qitems}[startnum=1]
+\qitem 已知如图 4-18 所示，求入瞳位置及物体在无穷远处时系统的最大极限视场，标出物方视场角$\omega_{m}$。
+\imgin[0.22]{}{figures/fig-015.jpg}
+\label{q:84:start}
+\answerarea[2.4cm]
+\label{q:84:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 已知物点 A 离透镜的距离-l 为$30\,\mathrm{mm}$，透镜的通光口径$D_{1}$为$30\,\mathrm{mm}$，在透镜后$10\,\mathrm{mm}$处有一个通光孔，其直径$D_{2}$为$22\,\mathrm{mm}$，像点$A'$离透镜的距离$l_{1}'=60\,\mathrm{mm}$，试求这个系统的孔径光阑、入瞳和出瞳。
+\label{q:85:start}
+\answerarea[7.0cm]
+\label{q:85:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 有一个透镜焦距为$100\,\mathrm{mm}$，其框直径$D'=40\,\mathrm{mm}$，在它前面$50\,\mathrm{mm}$处有一个通光孔，直径$D_{1}$为$35\,\mathrm{mm}$。问物点在$-500\,\mathrm{mm}$和$-300\,\mathrm{mm}$时，是否都是由同一元件起孔径光阑作用？相应的入瞳和出瞳的位置和大小如何？
+\label{q:86:start}
+\answerarea[7.0cm]
+\label{q:86:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 相距$50\,\mathrm{mm}$共轴放置的两个薄透镜$L_{1}$和$L_{2}$，它们的焦距分别为$90\,\mathrm{mm}$和$30\,\mathrm{mm}$、直径分别为$60\,\mathrm{mm}$和$40\,\mathrm{mm}$，在两透镜之间距 L2 20mm 处放置一个直径为$20\,\mathrm{mm}$的圆孔光阑。求该系统对$L_{1}$前$120\,\mathrm{mm}$处轴上物点的孔径光阑、入瞳和出瞳的位置及大小。
+\label{q:87:start}
+\answerarea[7.0cm]
+\label{q:87:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 将一个焦距为$40\,\mathrm{mm}$，直径为$30\,\mathrm{mm}$的薄透镜做成放大镜，眼瞳放在透镜像方焦点上，眼瞳直径为$4\,\mathrm{mm}$，物面放在透镜物方焦点上。试问：（1）哪一个是孔径光阑，哪一个是视场光阑？（2）入瞳在哪里？物方半孔径角等于多少？（3）入射窗在哪里？不发生渐晕时线视场等于多少？
+\label{q:88:start}
+\answerarea[7.0cm]
+\label{q:88:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 测量显微镜中目镜的焦距为$f'=16.67\,\mathrm{mm}$，物镜的垂轴放大率$\beta =-4\times$，物高$2y=4\,\mathrm{mm}$，物方孔径角$u=8.6^{\circ}$。求物镜的通光口径和$K=0.5$时目镜的通光口径需要多大（设显微镜物镜的物面到像面间的距离为$180\,\mathrm{mm}$）？
+\label{q:89:start}
+\answerarea[7.0cm]
+\label{q:89:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 一开普勒天文望远镜的物镜焦距为$1000\,\mathrm{mm}$，直径为$50\,\mathrm{mm}$；目镜焦距为$200\,\mathrm{mm}$，直径为$20\,\mathrm{mm}$；两镜相距$1200\,\mathrm{mm}$。今在物镜像方焦点处放置一直径为$16\,\mathrm{mm}$的圆孔光阑。试求此光学系统的（1）孔径光阑、入瞳和出瞳的位置及大小。（2）视场光阑、入窗和出窗的位置。
+\par\noindent （3）物方视场角和像方视场角。
+\label{q:90:start}
+\answerarea[7.0cm]
+\label{q:90:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 望远系统由焦距分别为$100\,\mathrm{mm}$和$200\,\mathrm{mm}$的两个正透镜构成，出瞳直径$D'=5\,\mathrm{mm}$，视场角$2\omega =10^{\circ}$。由于目镜口径的限制，轴外边缘视场的渐晕系数$K=0.5$。为了消除渐晕，在一次实像面上加场镜，问场镜的焦距应为多大时才能在不增加目镜口径的情况下消除渐晕？
+\label{q:91:start}
+\answerarea[7.0cm]
+\label{q:91:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 现有一架照相机，其物镜$f=40\,\mathrm{mm}$，像平面弥散斑直径的允许值为$0.02\,\mathrm{mm}$，现以常摄距离$p=3m$进行拍摄，相对孔径$D/f$分别采用$1/3.5$和$1/22$，试分别求其景深。
+\label{q:92:start}
+\answerarea[7.0cm]
+\label{q:92:end}
+\end{qitems}
+
+\section{第五章\quad 光度学和色度学基础}
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 光通过光学系统的能量损失包括光在两透明介质界面上的损失、（\hspace{1.6em}）和（\hspace{1.6em}）损失。
+\label{q:93:start}
+\answerarea[4.0cm]
+\label{q:93:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 发光强度的单位是（\hspace{1.6em}），光照度的单位是（\hspace{1.6em}）。
+\label{q:94:start}
+\answerarea[4.0cm]
+\label{q:94:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 点光源 S 在面元 dA 上产生的照度与光源的（\hspace{1.6em}）成正比，与（\hspace{1.6em}）成反比，并且与面元相对于光束的倾角有关。
+\label{q:95:start}
+\answerarea[4.0cm]
+\label{q:95:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 发光强度空间分布可用式$I_{\theta}=I_{N}\cos \theta$表示的发光表面为（\hspace{1.6em}）体，它的特点是各方向的（\hspace{1.6em}）相同。
+\label{q:96:start}
+\answerarea[4.0cm]
+\label{q:96:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 颜色的三属性分别是（\hspace{1.6em}）、（\hspace{1.6em}）和（\hspace{1.6em}），利用这三个属性可以定性和定量地描述任何一个颜色，如果在一个颜料中加入白色或黑色颜料，可以改变该颜色的（\hspace{1.6em}）和（\hspace{1.6em}）属性。
+\label{q:97:start}
+\answerarea[4.0cm]
+\label{q:97:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 一个发光球面，各方向发光强度均为 I0，则其发射出的总光通量为（\hspace{1.6em}）。
+\label{q:98:start}
+\answerarea[4.0cm]
+\label{q:98:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 地球半径为$6.371\times 10^{6}m$，到太阳的平均距离为$1.496\times 10^{11}m$，则地球对太阳的立体角为（\hspace{1.6em}）球面度。
+\label{q:99:start}
+\answerarea[4.0cm]
+\label{q:99:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 已知一个钨丝灯泡在空间均匀发光，其辐射光通量为 900lm，则其发光强度为（\hspace{1.6em}）。
+\label{q:100:start}
+\answerarea[4.0cm]
+\label{q:100:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 已知一发光体在空间均匀发出波长为$600\,\mathrm{nm}$的单色光，光谱光效率函数$V(600)=0.631$，测得某一方向上的辐射强度为$0.1\,\mathrm{W/sr}$，则该发光体的总辐通量为（\hspace{1.6em}），光通量为（\hspace{1.6em}），在此方向上的发光强度为（\hspace{1.6em}）。
+\label{q:101:start}
+\answerarea[4.0cm]
+\label{q:101:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 一均匀磨砂球形灯，直径为$170\,\mathrm{mm}$，发光光通量为 2000lm，则该灯的发光强度为（\hspace{1.6em}），光亮度为（\hspace{1.6em}）。
+\label{q:102:start}
+\answerarea[4.0cm]
+\label{q:102:end}
+\end{qitems}
+
+\subsection{三、计算题}
+\begin{qitems}[startnum=1]
+\qitem 一束波长为$4.6\times 10^{-7}m$的蓝光，光通量为 620lm，相应的辐通量是多少？如果投射在一个屏幕上，屏幕 1min 所接收的辐射能是多少？（已知$V(460)=0.06$）
+\label{q:103:start}
+\answerarea[7.0cm]
+\label{q:103:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 一房间长$5m$，宽$3m$，高$3m$。设有一灯泡悬挂在天花板中心离地面$2.5m$处照射房间，其发光强度为 60cd，求：（1）在灯正下方地板上的光照度为多少？（2）在房间角落地板上的光照度为多少？
+\label{q:104:start}
+\answerarea[7.0cm]
+\label{q:104:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 如图 5-4 所示的照明灯，聚光镜焦距为$150\,\mathrm{mm}$，通光孔径$150\,\mathrm{mm}$，灯丝是平面螺旋形，位于聚光镜的前焦面上。假定灯丝发光面为双面余弦辐射的圆盘，直径为$9.4\,\mathrm{mm}$，功率为$300W$，发光效率为$21.5\,\mathrm{lm}/W$。屏幕位于聚光镜后$15m$处。试求：（1）屏幕上的光照度及照明区光轴方向上的发光强度。（2）若去掉聚光镜，该灯泡直接照明距其$15m$处屏幕上相同大小面积时的光照度。（3）使用聚光镜和不使用聚光镜两种情况下，屏幕面上光照度的比。
+\imgin[0.26]{}{figures/fig-016.jpg}
+\label{q:105:start}
+\answerarea[2.4cm]
+\label{q:105:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 双筒望远镜的光学系统如图 5-5 所示，凸透镜、棱镜和平面玻璃均用冕牌玻璃制作，所有凹透镜都用火石玻璃制成，若所有材料的透明率 P 相同，且$P=0.985$，系统中各零件中心厚度之和$\Sigma d=100\,\mathrm{mm}$，计算光学零件表面不镀增透膜和镀增透膜两种情况下系统的总透射比。
+\imgin[0.22]{}{figures/fig-017.jpg}
+\label{q:106:start}
+\answerarea[2.4cm]
+\label{q:106:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 已知两种颜色的色品坐标分别为（$x_{1}$，$y_{1}$）和（$x_{2}$，$y_{2}$），亮度分别为$Y_{1}$和$Y_{2}$，求两种颜色相加混合色的色品坐标和亮度。
+\label{q:107:start}
+\answerarea[7.0cm]
+\label{q:107:end}
+\end{qitems}
+
+\section{第六章\quad 光线的光路计算及像差理论}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 下列像差中只与孔径有关的是：
+\par\noindent\hspace{2em}\ding{172}球差
+\par\noindent\hspace{2em}\ding{173}畸变
+\par\noindent\hspace{2em}\ding{174}细光束场曲
+\par\noindent\hspace{2em}\ding{175}位置色差
+\label{q:108:start}
+\answerarea[4.0cm]
+\label{q:108:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 下面像差中只与视场有关的是：
+\par\noindent\hspace{2em}\ding{172}正弦差
+\par\noindent\hspace{2em}\ding{173}慧差
+\par\noindent\hspace{2em}\ding{174}畸变
+\par\noindent\hspace{2em}\ding{175}细光束场曲
+\label{q:109:start}
+\answerarea[4.0cm]
+\label{q:109:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 以下几种初级像差中，当视场很小时就需要考虑的是：
+\par\noindent\hspace{2em}\ding{172}畸变
+\par\noindent\hspace{2em}\ding{173}慧差
+\par\noindent\hspace{2em}\ding{174}像散
+\par\noindent\hspace{2em}\ding{175}场曲
+\label{q:110:start}
+\answerarea[4.0cm]
+\label{q:110:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 指出下列关于正弦差的陈述，哪些是正确的：
+\par\noindent\hspace{2em}\ding{172}系统满足等晕成像条件时，存在正弦差。
+\par\noindent\hspace{2em}\ding{173}系统满足不晕成像条件时，存在正弦差。
+\par\noindent\hspace{2em}\ding{174}若正弦差$SC'=0$，则说明系统的初级慧差也为 0。
+\par\noindent\hspace{2em}\ding{175}若孔径光阑放在球面顶点处，则单个折射球面不产生正弦差。
+\label{q:111:start}
+\answerarea[4.0cm]
+\label{q:111:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 在球差、彗差、像散、像面弯曲、畸变、位置色差、倍率色差中，对轴上点成像产生圆形弥散斑的有
+\par\noindent\hspace{2em}\ding{172}1 种
+\par\noindent\hspace{2em}\ding{173}2 种
+\par\noindent\hspace{2em}\ding{174}3 种
+\par\noindent\hspace{2em}\ding{175}都不对
+\label{q:112:start}
+\answerarea[4.0cm]
+\label{q:112:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 在像差及其校正的描述中，正确的是：
+\par\noindent\hspace{2em}\ding{172}单正透镜产生正球差，单负透镜产生负球差，故可以通过正负透镜组合的方式校正系统球差。
+\par\noindent\hspace{2em}\ding{173}校正场曲时是针对边缘视场进行时，在 0.707 带存在最大剩余场曲。
+\par\noindent\hspace{2em}\ding{174}正畸变也称作桶形畸变，采用$\beta =-1$的对称光学结构可自动校正畸变。
+\par\noindent\hspace{2em}\ding{175}位置色差与光焦度成正比，可通过改变透镜形状参数进行校正。
+\label{q:113:start}
+\answerarea[4.0cm]
+\label{q:113:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 实际像与（\hspace{1.6em}）之间的差异称为像差，包括单色像差和色差两大类。其中，引起单色像差的主要原因是（\hspace{1.6em}）和（\hspace{1.6em}）。
+\label{q:114:start}
+\answerarea[4.0cm]
+\label{q:114:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 在球差、慧差、像散、场曲、畸变、位置色差和倍率色差这七种几何像差中，只与孔径相关的像差有（\hspace{1.6em}）和（\hspace{1.6em}）两种，只与视场有关的像差为（\hspace{1.6em}），与视场和孔径都有关的像差有（\hspace{1.6em}）种。
+\label{q:115:start}
+\answerarea[4.0cm]
+\label{q:115:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 在七种几何像差中，不影响成像清晰度的像差有（\hspace{1.6em}）种，使子午像和弧矢像不重合的像差是（\hspace{1.6em}），其初级量与视场的二次方成比例的像差有（\hspace{1.6em}）和（\hspace{1.6em}）2 种，孔径光阑位于单个折射球面球心时不可能产生的像差有（\hspace{1.6em}）和（\hspace{1.6em}）种，对于折射率相同、结构参数相同而阿贝系数不同的单薄透镜，在同样的物距、相同相对孔径情况下，阿贝数小的位置色差（\hspace{1.6em}）。
+\label{q:116:start}
+\answerarea[4.0cm]
+\label{q:116:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 单正透镜产生（\hspace{1.6em}）球差，单负透镜产生（\hspace{1.6em}）球差，因此它们组合可以校正球差。单折射面成像时，有三对不产生像差的共轭点，称为（\hspace{1.6em}）。
+\label{q:117:start}
+\answerarea[4.0cm]
+\label{q:117:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 单个折射球面的三对齐明点的共轭位置分别为（\hspace{1.6em}）、$L=L'=r$和（\hspace{1.6em}），可利用其特性制作齐明透镜，对应的垂轴放大率为（\hspace{1.6em}）。
+\label{q:118:start}
+\answerarea[4.0cm]
+\label{q:118:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 球面反射镜有（\hspace{1.6em}）对无球差的共轭点，其共轭位置为（\hspace{1.6em}）和（\hspace{1.6em}），对应的垂轴放大率为（\hspace{1.6em}）。
+\label{q:119:start}
+\answerarea[4.0cm]
+\label{q:119:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 轴外点单色光以细光束成像时产生的像差有（\hspace{1.6em}）、（\hspace{1.6em}）和（\hspace{1.6em}）。
+\label{q:120:start}
+\answerarea[4.0cm]
+\label{q:120:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 物空间一个平面，与像空间一个曲面共轭，则该成像系统存在（\hspace{1.6em}）像差；物平面上一个正方形，在像平面上成像为桶形，则成像系统存在（\hspace{1.6em}）像差；这两种像差改变了成像（\hspace{1.6em}），但对成像清晰度无影响。
+\label{q:121:start}
+\answerarea[4.0cm]
+\label{q:121:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem （\hspace{1.6em}）光学系统，当$\beta =-1$时，所有垂轴像差自动校正，此时轴向像差为（\hspace{1.6em}）。
+\label{q:122:start}
+\answerarea[4.0cm]
+\label{q:122:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 如果一个光学系统的初级子午彗差等于焦宽（\hspace{1.6em}），则$S_{II}$应等于（\hspace{1.6em}）；如果一个光学系统的初级球差等于焦深（\hspace{1.6em}），则$\Sigma S_{I}$应等于（\hspace{1.6em}）。
+\label{q:123:start}
+\answerarea[4.0cm]
+\label{q:123:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 初级位置色差仅决定于（\hspace{1.6em}）、（\hspace{1.6em}）和（\hspace{1.6em}），对相同的光焦度而言，阿贝常数越大，色差越（\hspace{1.6em}）。
+\label{q:124:start}
+\answerarea[4.0cm]
+\label{q:124:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 望远物镜是一种（\hspace{1.6em}）、（\hspace{1.6em}）的光学系统，因此要校正的像差是（\hspace{1.6em}）、（\hspace{1.6em}）和（\hspace{1.6em}），这些像差是与（\hspace{1.6em}）有关的。
+\label{q:125:start}
+\answerarea[4.0cm]
+\label{q:125:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 照相系统属于（\hspace{1.6em}）、（\hspace{1.6em}）的光学系统，因此要校正的像差是（\hspace{1.6em}）。
+\label{q:126:start}
+\answerarea[4.0cm]
+\label{q:126:end}
+\end{qitems}
+
+\subsection{三、问答*}
+\begin{qitems}[unshow,suffix={}]
+\qitem 无限远处物 AB 经光学系统成像，通过光线光路计算得到轴上像点和轴外细光束，宽光束成像点，如图 6-1 所示，请在图中标注出 5 种像差的符号，并阐述其产生原因、危害和基本校正方法。
+\par\noindent\tbd
+\imgin[0.17]{}{figures/fig-019.jpg}
+\label{q:127:start}
+\answerarea[2.4cm]
+\label{q:127:end}
+\end{qitems}
+
+\subsection{四、计算}
+\begin{qitems}[startnum=1]
+\qitem 若物点在第一面顶点，第二面符合齐明条件。已知透镜折射率$n=1.5$，$d=4\,\mathrm{mm}$，求该齐明镜的角放大率和第二面的曲率半径。
+\label{q:128:start}
+\answerarea[7.0cm]
+\label{q:128:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 设计一个$f'=100\,\mathrm{mm}$的双胶合物镜，选用 K9（$n_{D}=1.5163$，$\nu_{D}=64.1$）和 ZF2（$n_{D}=1.6725$，$\nu_{D}=32.2$）玻璃制作透镜，为补偿其他元件的色差，物镜保留$\Delta l'_{FC}=-0.26\,\mathrm{mm}$的初级位置色差。求：（1）正、负透镜的光焦度分配。（2）该物镜的二级光谱多大。
+\label{q:129:start}
+\answerarea[7.0cm]
+\label{q:129:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 一个双胶合望远物镜，$f'=100\,\mathrm{mm}$，若只含初级球差，边缘带三个球面的球差分布系数分别为：0.0100104、-0.0338527 和 0.0256263，求：（1）该物镜的初级球差有多大？（2）若初级球差允许不大于 4 倍焦深，物镜的球差是否超差？（3）物镜的二级光谱多大？
+\label{q:130:start}
+\answerarea[7.0cm]
+\label{q:130:end}
+\end{qitems}
+
+\section{第七章\quad 典型光学系统与像质评价}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 眼睛可等效为一个摄影光学系统，它的主要特性表现在：
+\par\noindent\hspace{2em}\ding{172}眼睛是一个变焦系统，当观察近处物体时，其焦距变大，反之其焦距变小。
+\par\noindent\hspace{2em}\ding{173}眼睛的视觉灵敏度随光谱而异，在连续可见光谱中间的部分视觉灵敏度较高。
+\par\noindent\hspace{2em}\ding{174}眼睛的对准精度与对准方式有关，其中两直线重合方式的对准精度最高。
+\par\noindent\hspace{2em}\ding{175}眯起眼睛可以看清原本模糊的景物是因为瞳孔直径缩小，减小了眼睛光学系统的像差，提高了眼睛的分辨能力。
+\label{q:131:start}
+\answerarea[4.0cm]
+\label{q:131:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 200 度的近视眼，应配戴眼镜的焦距为：
+\par\noindent\hspace{2em}\ding{172}$200\,\mathrm{mm}$
+\par\noindent\hspace{2em}\ding{173}$500\,\mathrm{mm}$
+\par\noindent\hspace{2em}\ding{174}$-200\,\mathrm{mm}$
+\par\noindent\hspace{2em}\ding{175}$-500\,\mathrm{mm}$
+\label{q:132:start}
+\answerarea[4.0cm]
+\label{q:132:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 对于放大镜，正确的陈述是：
+\par\noindent\hspace{2em}\ding{172}其视觉放大率与观察条件有关，公式$\Gamma =250/f'$只适用于像在明视距离时的情况。
+\par\noindent\hspace{2em}\ding{173}放大镜的视场用线视场表示，其大小与观察条件有关。
+\par\noindent\hspace{2em}\ding{174}放大镜的放大倍数越大，其线视场就越小。
+\par\noindent\hspace{2em}\ding{175}在放大镜和人眼构成的光学系统中，放大镜的框是视场光阑，也是渐晕光阑。
+\label{q:133:start}
+\answerarea[4.0cm]
+\label{q:133:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 设放大镜半径为 h，它到人眼的距离为 d，人眼瞳孔半径为$\alpha$，要使通过放大镜看到的视场大些，则可采用的方法是：
+\par\noindent\hspace{2em}\ding{172}增大 h，减小 d
+\par\noindent\hspace{2em}\ding{173}增大 h，增大 d
+\par\noindent\hspace{2em}\ding{174}减小 h，减小 d
+\par\noindent\hspace{2em}\ding{175}减小 h，增大 d
+\label{q:134:start}
+\answerarea[4.0cm]
+\label{q:134:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 关于显微镜系统的正确陈述是：
+\par\noindent\hspace{2em}\ding{172}显微镜的作用相当于一个放大镜，它可将位于系统物镜前焦面上的物成像在无穷远处供人眼观察。
+\par\noindent\hspace{2em}\ding{173}显微镜是大孔径、小视场系统，需校正球差、正弦差和慧差。
+\par\noindent\hspace{2em}\ding{174}当视觉放大率增大时，其线视场变小，出瞳变小。
+\par\noindent\hspace{2em}\ding{175}系统的视觉放大率不能大于 1000NA 是因为物镜分辨率的限制。
+\label{q:135:start}
+\answerarea[4.0cm]
+\label{q:135:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 为提高显微镜的视觉放大率$\Gamma$，应该
+\par\noindent\hspace{2em}\ding{172}增大物镜与目镜之间的光学间隔。
+\par\noindent\hspace{2em}\ding{173}减小物镜与目镜的焦距。
+\par\noindent\hspace{2em}\ding{174}增大显微物镜的数值孔径。
+\par\noindent\hspace{2em}\ding{175}增大目镜的视觉放大率。
+\label{q:136:start}
+\answerarea[4.0cm]
+\label{q:136:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 在测量用显微系统中，正确的陈述是：
+\par\noindent\hspace{2em}\ding{172}物镜的焦距和目镜的焦距都很短。
+\par\noindent\hspace{2em}\ding{173}分辨率与数值孔径有关。
+\par\noindent\hspace{2em}\ding{174}物镜框是孔径光阑。
+\par\noindent\hspace{2em}\ding{175}分划板应放置在物镜的后焦面上。
+\label{q:137:start}
+\answerarea[4.0cm]
+\label{q:137:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 对于柯勒照明，正确的陈述是：
+\par\noindent\hspace{2em}\ding{172}光能利用率高。
+\par\noindent\hspace{2em}\ding{173}照明面的光照度均匀。
+\par\noindent\hspace{2em}\ding{174}照明系统的出瞳与后接光学系统的入瞳衔接。
+\par\noindent\hspace{2em}\ding{175}照明系统的出瞳与后接光学系统的人窗衔接。
+\label{q:138:start}
+\answerarea[4.0cm]
+\label{q:138:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 对于临界照明，正确的陈述是：
+\par\noindent\hspace{2em}\ding{172}光能利用率高。
+\par\noindent\hspace{2em}\ding{173}照明面的光照度均匀。
+\par\noindent\hspace{2em}\ding{174}光源面是照明系统的视场光阑。
+\par\noindent\hspace{2em}\ding{175}聚光镜是照明系统的孔径光阑。
+\label{q:139:start}
+\answerarea[4.0cm]
+\label{q:139:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 在望远系统中，正确的陈述是：
+\par\noindent\hspace{2em}\ding{172}物镜的焦距和目镜的焦距都很短。
+\par\noindent\hspace{2em}\ding{173}光学间隔为 0。
+\par\noindent\hspace{2em}\ding{174}物镜框是孔径光阑。
+\par\noindent\hspace{2em}\ding{175}分划板应放置在物镜的后焦面上。
+\label{q:140:start}
+\answerarea[4.0cm]
+\label{q:140:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 在望远系统中，正确的陈述是：
+\par\noindent\hspace{2em}\ding{172}系统的作用是扩大人眼对物的张角。
+\par\noindent\hspace{2em}\ding{173}系统的作用是通过提高垂轴放大率$\beta$来使人眼看清物。
+\par\noindent\hspace{2em}\ding{174}物镜的焦距应大于目镜的焦距。
+\par\noindent\hspace{2em}\ding{175}系统设计中应使光学间隔尽量增大。
+\label{q:141:start}
+\answerarea[4.0cm]
+\label{q:141:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 对于照相系统，正确的陈述是：
+\par\noindent\hspace{2em}\ding{172}焦距变大，可使像增大。
+\par\noindent\hspace{2em}\ding{173}光圈变大，可使像面照度增大。
+\par\noindent\hspace{2em}\ding{174}光圈变大，可使像面照度不均匀程度变大。
+\par\noindent\hspace{2em}\ding{175}相对孔径决定了照相系统的分辨率。
+\label{q:142:start}
+\answerarea[4.0cm]
+\label{q:142:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 在照相系统中
+\par\noindent\hspace{2em}\ding{172}胶片尺寸一定时，焦距越长视场角越小。
+\par\noindent\hspace{2em}\ding{173}当焦距一定时，胶片尺寸越大视场角越小。
+\par\noindent\hspace{2em}\ding{174}孔径光阑的位置影响轴外物点参与成像光束的选择。
+\par\noindent\hspace{2em}\ding{175}孔径光阑的大小影响轴上物点参与成像光束的口径。
+\label{q:143:start}
+\answerarea[4.0cm]
+\label{q:143:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 在用照相机拍摄景物时，要获得较大的景深，应该
+\par\noindent\hspace{2em}\ding{172}增大照相系统的入瞳直径。
+\par\noindent\hspace{2em}\ding{173}将对准平面置于无穷远处。
+\par\noindent\hspace{2em}\ding{174}选用长焦距镜头。
+\par\noindent\hspace{2em}\ding{175}增大光圈数。
+\label{q:144:start}
+\answerarea[4.0cm]
+\label{q:144:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 拍摄人像艺术照，为突出主要人物，使背景模糊，应选用：
+\par\noindent\hspace{2em}\ding{172}大焦距、小 F 数和小对准距离
+\par\noindent\hspace{2em}\ding{173}大焦距、大 F 数和小对准距离
+\par\noindent\hspace{2em}\ding{174}大焦距、大 F 数和大对准距离
+\par\noindent\hspace{2em}\ding{175}小焦距、小 F 数和小对准距离
+\label{q:145:start}
+\answerarea[4.0cm]
+\label{q:145:end}
+\end{qitems}
+
+\begin{qitems}[startnum=16]
+\qitem 照相系统的三个重要参数是：
+\par\noindent\hspace{2em}\ding{172}视场角、分辨率和焦距
+\par\noindent\hspace{2em}\ding{173}视场角、相对孔径和焦距
+\par\noindent\hspace{2em}\ding{174}视场角、数值孔径和焦距
+\par\noindent\hspace{2em}\ding{175}视场角、相对孔径和分辨率
+\label{q:146:start}
+\answerarea[4.0cm]
+\label{q:146:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 若某先生佩戴 200 度的远视眼镜正合适，则该眼镜的焦距为（\hspace{1.6em}）mm，该先生的远点距为（\hspace{1.6em}）m。
+\label{q:147:start}
+\answerarea[4.0cm]
+\label{q:147:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 人眼的物方焦距要比像方焦距（\hspace{1.6em}）（长/短）；若某人的远点距为眼后$1m$，则需要佩戴（\hspace{1.6em}）度的老花镜，其焦距为（\hspace{1.6em}）mm。
+\label{q:148:start}
+\answerarea[4.0cm]
+\label{q:148:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 使用放大镜观察物体时，孔径光阑是（\hspace{1.6em}），视场光阑是（\hspace{1.6em}）。
+\label{q:149:start}
+\answerarea[4.0cm]
+\label{q:149:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 望远系统的光学结构特点是（\hspace{1.6em}）和（\hspace{1.6em}）。使用伽利略望远镜观察物体时，孔径光阑是（\hspace{1.6em}），视场光阑是（\hspace{1.6em}）。由于该系统的人窗与物面不重合，所以观察大视场时一般存在（\hspace{1.6em}）现象。
+\label{q:150:start}
+\answerarea[4.0cm]
+\label{q:150:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 采用叉丝对直线的方法对准时，人眼的对准精度为$15''$，通过放大倍率为 10 倍的望远镜以同样的方法瞄准时对准精度为（\hspace{1.6em}）。
+\label{q:151:start}
+\answerarea[4.0cm]
+\label{q:151:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 生物显微镜常用的透射照明方式有（\hspace{1.6em}）和柯勒照明两种。柯勒照明系统主要由（\hspace{1.6em}）、（\hspace{1.6em}）、（\hspace{1.6em}）和两个光阑组成，它与显微镜系统的光瞳衔接关系是（\hspace{1.6em}）。
+\label{q:152:start}
+\answerarea[4.0cm]
+\label{q:152:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 显微镜常用的物镜倍率是$4\times$、$10\times$、（\hspace{1.6em}）和$100\times$，常用的目镜倍率是$5\times$、$10\times$和（\hspace{1.6em}）。因此通常情况下，显微镜最大的放大倍率为（\hspace{1.6em}）。为了兼顾显微镜分辨本领与放大倍数之间的关系，其数值孔径和视觉放大率应满足关系式（\hspace{1.6em}）。
+\label{q:153:start}
+\answerarea[4.0cm]
+\label{q:153:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 有一浸液物镜，物方为$n=1.4$的液体，像方为空气。测得像方焦距为$100\,\mathrm{mm}$，则其物方焦距为（\hspace{1.6em}）mm；若物镜数值孔径为 0.7，则物方孔径角为（\hspace{1.6em}）度。
+\label{q:154:start}
+\answerarea[4.0cm]
+\label{q:154:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 一个油浸显微镜，用波长为$450\,\mathrm{nm}$的蓝光照明，分辨率为每毫米 4400 线对，则该显微镜的数值孔径为（\hspace{1.6em}）。
+\label{q:155:start}
+\answerarea[4.0cm]
+\label{q:155:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 一个$8\times$开普勒望远镜后加一个倒置的$100\times$显微镜，整个系统的焦距是（\hspace{1.6em}）mm。
+\label{q:156:start}
+\answerarea[4.0cm]
+\label{q:156:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 摄影物镜的三个重要参数是（\hspace{1.6em}）、（\hspace{1.6em}）和（\hspace{1.6em}）。其中（\hspace{1.6em}）影响像面的照度和分辨率。对摄影系统而言，焦距越长，景深越（\hspace{1.6em}）；入瞳直径越大，景深越（\hspace{1.6em}）；拍摄距离越远，景深越（\hspace{1.6em}）。
+\label{q:157:start}
+\answerarea[4.0cm]
+\label{q:157:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 用相对孔径为 1：2 的照相物镜在日光下进行拍摄，若已知底片的分辨率为$80lp/mm$，则系统的分辨率能够达到（\hspace{1.6em}）$lp/mm$。
+\label{q:158:start}
+\answerarea[4.0cm]
+\label{q:158:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 已有一个焦距为$150\,\mathrm{mm}$的物镜，若想制作一个$6\times$的望远镜，应选用焦距为（\hspace{1.6em}）的目镜，分别采用开普勒和伽利略望远镜结构，对应得到系统的机械筒长为（\hspace{1.6em}）。
+\label{q:159:start}
+\answerarea[4.0cm]
+\label{q:159:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 在变焦距光学系统中，对像面移动进行补偿的方法主要有机械补偿法和（\hspace{1.6em}）两种。机械补偿法中，焦距的变化是通过（\hspace{1.6em}）来实现的，其变倍比为（\hspace{1.6em}）。
+\label{q:160:start}
+\answerarea[4.0cm]
+\label{q:160:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 有一个变焦投影物镜将投影图片成像于投影屏幕上，如要使放大倍率再大些，焦距应变得更（\hspace{1.6em}）一些，此时如果相对孔径不变，像面照度会变得更（\hspace{1.6em}）。
+\label{q:161:start}
+\answerarea[4.0cm]
+\label{q:161:end}
+\end{qitems}
+
+\begin{qitems}[startnum=16]
+\qitem 评价小像差光学系统的成像质量可以选用（\hspace{1.6em}）、（\hspace{1.6em}）和光学传递函数方法；评价大像差光学系统的成像质量可以选用（\hspace{1.6em}）和光学传递函数方法。其中最客观全面的方法是（\hspace{1.6em}）。
+\label{q:162:start}
+\answerarea[4.0cm]
+\label{q:162:end}
+\end{qitems}
+
+\subsection{三、计算题}
+\begin{qitems}[startnum=1]
+\qitem 如图 7-14 所示，观察者 P 通过一块薄玻璃片观察凸面镜中自己眼睛的像。若凸面镜的焦距为$100\,\mathrm{mm}$，眼睛离凸面镜顶点的距离为$400\,\mathrm{mm}$。观察者移动玻璃片，使玻璃片反射的眼睛像与在凸面镜中看到的眼睛像重合在一起，求此时玻璃片离眼睛的距离。
+\imgin[0.31]{}{figures/fig-020.jpg}
+\label{q:163:start}
+\answerarea[2.4cm]
+\label{q:163:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 有一个显微系统，物镜焦距$f'=10\,\mathrm{mm}$，孔径光阑位于物镜的像方焦平面上，当物体位于$l=-1.1f'$处，以孔径角$U(\tan U=0.1)$成像时，求：（1）显微镜的孔径光阑。（2）显微镜的数值孔径和分辨率（设$\lambda =550\,\mathrm{nm}$）。（3）当物镜的通光口径$D=8f'\tan U$时，不发生渐晕的视场大小。（4）画出光路图（包括轴上点光束和轴外点光束）。
+\label{q:164:start}
+\answerarea[7.0cm]
+\label{q:164:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 有一个测量显微镜，放大率$\Gamma =-100\times$，物体位于物镜前$15\,\mathrm{mm}$处；若物镜放大倍率$\beta =-10\times$，数值孔径$NA=0.2$，通光孔径为$10\,\mathrm{mm}$，试求：（1）显微镜的分辨率。（2）物镜和目镜的焦距。（3）不发生渐晕时的视场大小 2y。（4）分划板的大小和位置。（5）孔径光阑的大小和位置。（6）若视度调节为$\pm 4$个屈光度，目镜应能移动的距离。（7）画出系统的光路图。
+\label{q:165:start}
+\answerarea[7.0cm]
+\label{q:165:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 一个显微镜物镜的垂轴放大率为$\beta =-3\times$，数值孔径$NA=0.1$，共轭距$L=180\,\mathrm{mm}$，物镜框是孔径光阑，目镜焦距$f'_{e}=25\,\mathrm{mm}$，求：（1）显微镜的视觉放大率。（2）出射光瞳直径。
+\par\noindent （3）出射光瞳距离（镜目距）。（4）斜入射照明时显微镜的分辨率，$\lambda =0.55\,\mathrm{\mu m}$。（5）物镜的通光孔径。（6）物高$2y=6\,\mathrm{mm}$，渐晕系数$K=50\%$时目镜的通光孔径。
+\label{q:166:start}
+\answerarea[7.0cm]
+\label{q:166:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 欲分辨$0.000725\,\mathrm{mm}$的微小物体，使用波长$\lambda =0.00055\,\mathrm{mm}$，斜入射照明，问：（1）显微镜的视觉放大率最小应为多大？（2）数值孔径应取多少合适？
+\label{q:167:start}
+\answerarea[7.0cm]
+\label{q:167:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 有一个生物显微镜，物镜数值孔径$NA=0.5$，物体大小$2y=0.4\,\mathrm{mm}$，照明灯丝面积$1.2\times 1.2\,\mathrm{mm}^{2}$，灯丝到物面的距离$100\,\mathrm{mm}$，采用临界照明，求聚光镜焦距和通光孔径。
+\label{q:168:start}
+\answerarea[7.0cm]
+\label{q:168:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 一个照明器由灯泡和聚光镜组成，已知聚光镜焦距$f=400\,\mathrm{mm}$，通光孔径$D=200\,\mathrm{mm}$，要求照明距离为$5m$远直径为$3m$的圆，试问灯泡应安装在什么位置。
+\label{q:169:start}
+\answerarea[7.0cm]
+\label{q:169:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 为看清$4\,\mathrm{km}$处相隔$150\,\mathrm{mm}$的两个点（设$1^{\circ}=0.0003\,\mathrm{rad}$），用开普勒望远镜观察，（1）求开普勒望远镜的工作放大倍率。（2）若筒长$L=100\,\mathrm{mm}$，求物镜和目镜的焦距。（3）物镜框是孔径光阑，求出射光瞳距离。（4）为满足工作放大率的要求，求物镜的通光孔径。
+\par\noindent （5）视度调节在$\pm 5D$（屈光度），求目镜的移动量。（6）若物方视场角$2\omega =8^{\circ}$求像方视场角。（7）渐晕系数$K=50\%$，求目镜的通光孔径。
+\label{q:170:start}
+\answerarea[7.0cm]
+\label{q:170:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 开普勒望远镜的筒长为$225\,\mathrm{mm}$，视觉放大率$\Gamma =-8\times$，视场角$2\omega =6^{\circ}$，出瞳$D'=5\,\mathrm{mm}$，系统不发生渐晕。（1）求物镜和目镜的焦距。（2）目镜的通光孔径和出瞳距。（3）在物镜焦面处放一场镜，其焦距$f'=75\,\mathrm{mm}$，求新的出瞳距和目镜的通光孔径。（4）目镜的视度调节在$\pm 4D$（屈光度），求目镜的移动量。
+\label{q:171:start}
+\answerarea[7.0cm]
+\label{q:171:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 已知液晶电视屏对角线为$76.2\,\mathrm{mm}$，大屏幕对角线尺寸为$2540\,\mathrm{mm}$，投影距离（即投影物镜到屏幕的距离）为$3100\,\mathrm{mm}$，如果要求投影画面对角线在 1143～$2286\,\mathrm{mm}$之间连续可调，试求投影变焦物镜的焦距范围和最大视场。
+\label{q:172:start}
+\answerarea[7.0cm]
+\label{q:172:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 有一投影测量系统，垂轴放大率$\beta =-20\times$，共轭距为$441\,\mathrm{mm}$；若孔径光阑直径$10\,\mathrm{mm}$，且投影屏幕对角线长$380\,\mathrm{mm}$，试求：（1）投影物镜的焦距。（2）物方最大量程。（3）物镜的通光孔径（测量系统不允许有渐晕）。（4）将此投影物镜按照相物镜来考虑，它能否分辨$1\,\mathrm{\mu m}$的细节信息？（5）画出光路图。
+\label{q:173:start}
+\answerarea[7.0cm]
+\label{q:173:end}
+\end{qitems}
+
+\section{第八章\quad 光的电磁理论基础}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 一平面电磁波能表示成$E_{x}=0$，$E_{y}=2\cos [2\pi \times 10^{14}(t-z/c)+\pi /3]$，$E_{z}=0$，则表明：
+\par\noindent\hspace{2em}\ding{172}光波沿 z 轴正向传播。
+\par\noindent\hspace{2em}\ding{173}原点的初位相是$\pi /3$。
+\par\noindent\hspace{2em}\ding{174}当$t=2.5\times 10^{-15}s$时，原点处的电场矢量 E 沿 y 轴正向。
+\par\noindent\hspace{2em}\ding{175}当$t=2.5\times 10^{-15}s$时，原点处的磁感应强度矢量 B 沿 z 轴正向。
+\label{q:174:start}
+\answerarea[4.0cm]
+\label{q:174:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 一平面电磁波从真空进入折射率$n>1$的介质，则在该介质中：
+\par\noindent\hspace{2em}\ding{172}电磁波的传播速度变小。
+\par\noindent\hspace{2em}\ding{173}电磁波的波长变小。
+\par\noindent\hspace{2em}\ding{174}电磁波的周期变小。
+\par\noindent\hspace{2em}\ding{175}电磁波的波数变小。
+\label{q:175:start}
+\answerarea[4.0cm]
+\label{q:175:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 水面上浮一层油，若一束红光从空气以适当的角度射入油层，通过水后再经过玻璃器皿射出。已知油的折射率$n_{1}=1.47$，水的折射率$n_{2}=1.33$，玻璃的折射率$n_{3}=1.5$。设光线在油中、水中和玻璃中的频率分别为$\nu_{1}$、$\nu_{2}$、$\nu_{3}$，传播速度分别为$u_{1}$、$u_{2}$、$u_{3}$，光的波长分别为$\lambda_{1}$、$\lambda_{2}$、$\lambda_{3}$，则下列物理量排列顺序正确的是：
+\par\noindent\hspace{2em}\ding{172}$\nu_{1}>\nu_{2}>\nu_{3}$，$u_{1}=u_{2}=u_{3}$，$\lambda_{1}=\lambda_{2}=\lambda_{3}$
+\par\noindent\hspace{2em}\ding{173}$\nu_{1}=\nu_{2}=\nu_{3}$，$u_{2}>u_{1}>u_{3}$，$\lambda_{2}>\lambda_{1}>\lambda_{3}$
+\par\noindent\hspace{2em}\ding{174}$\nu_{1}<\nu_{2}<\nu_{3}$，$u_{2}>u_{1}>u_{3}$，$\lambda_{2}>\lambda_{1}>\lambda_{3}$
+\par\noindent\hspace{2em}\ding{175}$\nu_{1}=\nu_{2}=\nu_{3}$，$u_{1}>u_{2}>u_{3}$，$\lambda_{1}>\lambda_{2}>\lambda_{3}$
+\label{q:176:start}
+\answerarea[4.0cm]
+\label{q:176:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 如图 8-4，两束不同的单色光 P 和 Q 以适当的角度入射到半圆形玻璃砖的圆心处，其出射光线都沿 OF 方向射出，则下面说法正确的是：
+\par\noindent\hspace{2em}\ding{172}P 光在玻璃中的折射率大。
+\par\noindent\hspace{2em}\ding{173}P 光在玻璃中的波长比 Q 光在玻璃中的波长小。
+\par\noindent\hspace{2em}\ding{174}P 光的频率大，穿过玻璃砖需要的时间长。
+\par\noindent\hspace{2em}\ding{175}Q 光的频率大，穿过玻璃砖需要的时间长。
+\imgin[0.22]{}{figures/fig-021.jpg}
+\label{q:177:start}
+\answerarea[1.6cm]
+\label{q:177:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 设折射率为$n_{2}$的介质层放在折射率为$n_{1}$和$n_{3}$的两种介质之间，如图 8-5 所示，通过上下两界面反射的光线 1、2 存在半波损失的情况是：
+\par\noindent\hspace{2em}\ding{172}$n_{1}>n_{2}>n_{3}$
+\par\noindent\hspace{2em}\ding{173}$n_{1}<n_{2}<n_{3}$
+\par\noindent\hspace{2em}\ding{174}$n_{1}>n_{2}<n_{3}$
+\par\noindent\hspace{2em}\ding{175}$n_{1}<n_{2}>n_{3}$
+\imgin[0.27]{}{figures/fig-022.jpg}
+\label{q:178:start}
+\answerarea[1.6cm]
+\label{q:178:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 由两个正交分量$E_{x}(z,t)=A\cos (\omega t-kz)$和$E_{y}(z,t)=A\cos (\omega t-kz+\pi /5)$表示的光波，其偏振态为
+\par\noindent\hspace{2em}\ding{172}线偏振光
+\par\noindent\hspace{2em}\ding{173}右旋圆偏振光
+\par\noindent\hspace{2em}\ding{174}左旋圆偏振光
+\par\noindent\hspace{2em}\ding{175}右旋椭圆偏振光
+\label{q:179:start}
+\answerarea[4.0cm]
+\label{q:179:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 能够产生光学拍现象的两个叠加光波应该是：
+\par\noindent\hspace{2em}\ding{172}频率相同、振动方向相同、传播方向相同、振幅相等的光波。
+\par\noindent\hspace{2em}\ding{173}频率相同、振动方向相反、传播方向相同、振幅相等的光波。
+\par\noindent\hspace{2em}\ding{174}频率接近、振动方向相同、传播方向相同、振幅相等的光波。
+\par\noindent\hspace{2em}\ding{175}频率相同、振动方向相同、传播方向相反、振幅相等的光波。
+\label{q:180:start}
+\answerarea[4.0cm]
+\label{q:180:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 两个频率相同、振动方向相同、传播方向相反的光波相叠加将会出现：
+\par\noindent\hspace{2em}\ding{172}干涉现象
+\par\noindent\hspace{2em}\ding{173}驻波现象
+\par\noindent\hspace{2em}\ding{174}偏振现象
+\par\noindent\hspace{2em}\ding{175}光学拍现象
+\label{q:181:start}
+\answerarea[4.0cm]
+\label{q:181:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 一频率为$10^{14}\,\mathrm{Hz}$的球面波，距波源$1m$处的振幅为$2\,\mathrm{V/m}$，则：
+\par\noindent\hspace{2em}\ding{172}距波源$4m$处的振幅为$0.5\,\mathrm{V/m}$
+\par\noindent\hspace{2em}\ding{173}距波源$4m$处的振幅为$1\,\mathrm{V/m}$
+\par\noindent\hspace{2em}\ding{174}角频率为$2\pi \times 10^{14}\,\mathrm{rad/s}$
+\par\noindent\hspace{2em}\ding{175}角频率为$2\pi \times 10^{15}\,\mathrm{rad/s}$
+\label{q:182:start}
+\answerarea[4.0cm]
+\label{q:182:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 一个光波的复振幅具有$E(r)=A/r\cdot \exp (ikr)$形式，这是一个：
+\par\noindent\hspace{2em}\ding{172}发散球面波
+\par\noindent\hspace{2em}\ding{173}会聚球面波
+\par\noindent\hspace{2em}\ding{174}平面波
+\par\noindent\hspace{2em}\ding{175}柱面波
+\label{q:183:start}
+\answerarea[4.0cm]
+\label{q:183:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 一束光入射到两种透明介质的分界面上，有可能发生的现象是：
+\par\noindent\hspace{2em}\ding{172}一部分光反射回原介质，同时另一部分光进入第二种介质中。
+\par\noindent\hspace{2em}\ding{173}只有反射光，没有折射光。
+\par\noindent\hspace{2em}\ding{174}只有折射光，没有反射光。
+\par\noindent\hspace{2em}\ding{175}既没有折射光也没有反射光。
+\label{q:184:start}
+\answerarea[4.0cm]
+\label{q:184:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 某种红光波长为$760\,\mathrm{nm}$，它在水中$(n=1.33)$的波长为（\hspace{1.6em}）nm，在水中的频率为（\hspace{1.6em}）Hz，在水中的颜色为（\hspace{1.6em}）。
+\label{q:185:start}
+\answerarea[4.0cm]
+\label{q:185:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 当一束光波入射到两种介质的均匀分界面上时，一般会产生（\hspace{1.6em}）现象；当满足（\hspace{1.6em}）的条件时，会出现全反射现象；当满足（\hspace{1.6em}）的条件时，会出现“全透射”现象。
+\label{q:186:start}
+\answerarea[4.0cm]
+\label{q:186:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 驻波产生的条件是（\hspace{1.6em}）。
+\label{q:187:start}
+\answerarea[4.0cm]
+\label{q:187:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 一束光波可用如下两个正交分量$E_{x}(z,t)=A\cos (\omega t-kz)$和$E_{y}(z,t)=A\cos (\omega t-kz-\pi /5)$表示，则光波的偏振态为（\hspace{1.6em}）。
+\label{q:188:start}
+\answerarea[4.0cm]
+\label{q:188:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 两束光波的波动方程分别为$y_{1}=A\cos (\omega t+\varphi_{1})$和$y_{2}=A\cos (\omega t+\varphi_{2})$，两波叠加将产生干涉现象，它们的合成波的振幅为（\hspace{1.6em}）。
+\label{q:189:start}
+\answerarea[4.0cm]
+\label{q:189:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 平面波$E=100\exp [i(2x+3y+4z)-1\times 10^{8}t]$在传播方向上的单位矢量（\hspace{1.6em}）。
+\label{q:190:start}
+\answerarea[4.0cm]
+\label{q:190:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 已知光波的波函数为$E(x,t)=10^{3}\sin [\pi (3\times 10^{6}x-9\times 10^{14}t)]\,\mathrm{V/m}$，则该光波的波长为（\hspace{1.6em}）nm。
+\label{q:191:start}
+\answerarea[4.0cm]
+\label{q:191:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 振幅值为 A，在 rOz 平面内沿与 z 轴成$\theta$角方向传播的波长为$\lambda$的平面单色光波的复振幅可以表示为（\hspace{1.6em}）。
+\label{q:192:start}
+\answerarea[4.0cm]
+\label{q:192:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 某种玻璃的吸收系数为$10^{-2}\,\mathrm{cm}^{-1}$，空气的吸收系数为$10^{-5}\,\mathrm{cm}^{-1}$。则$1\,\mathrm{cm}$厚的玻璃所吸收的光，相当于（\hspace{1.6em}）厚的空气层所吸收的光。
+\label{q:193:start}
+\answerarea[4.0cm]
+\label{q:193:end}
+\end{qitems}
+
+\subsection{三、计算题}
+\begin{qitems}[startnum=1]
+\qitem 在玻璃中传播的一个线偏振光可以表示为$E_{x}=10^{5}\cos [\pi \times 10^{15}(t-x/(0.65c))]$，$E_{y}=0$，$E_{z}=0$。试求：（1）光的频率和波长。（2）玻璃的折射率。
+\label{q:194:start}
+\answerarea[7.0cm]
+\label{q:194:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 两束振动方向相同的单色光波在空间某一点产生的光振动分别表示为$E_{1}=a_{1}\cos (\alpha_{1}-\omega t)$和$E_{2}=a_{2}\cos (\alpha_{2}-\omega t)$，若$\omega =2\pi \times 10^{15}\,\mathrm{rad/s}$，$a_{1}=6\,\mathrm{V/m}$，$a_{2}=8\,\mathrm{V/m}$，$\alpha_{1}=0$和$\alpha_{2}=\pi$，求合振动的表示式。
+\label{q:195:start}
+\answerarea[7.0cm]
+\label{q:195:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 利用波的复数表达式求两个波$E_{1}=a\cos (kr+\omega t)$和$E_{2}=-a\cos (kr-\omega t)$的合成波。
+\label{q:196:start}
+\answerarea[7.0cm]
+\label{q:196:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 右旋圆偏振光以$50^{\circ}$角入射到空气-玻璃界面（设玻璃的折射率为 1.5），试求反射波和透射波的偏振态。
+\label{q:197:start}
+\answerarea[7.0cm]
+\label{q:197:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 假设线偏振光入射在一分界面上，其振动面和入射面所成的角度为$\theta$，如果平行入射面分量与垂直入射面分量的反射系数分别是 rp 和 rs，试写出总反射比 R 的表达式。
+\label{q:198:start}
+\answerarea[7.0cm]
+\label{q:198:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 有一个光学系统由两片分离的透镜组成，两片透镜的折射率分别是 1.5 和 1.7，求此系统的反射光能损失。如透镜表面镀有增透膜使反射率降为 1\%，问此系统的光能损失又是多少？
+\label{q:199:start}
+\answerarea[7.0cm]
+\label{q:199:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 有一种媒质，吸收系数$\alpha =0.32\,\mathrm{cm}^{-1}$，当透射光强分别为入射光强的 10\%、20\%、50\%及80\%时，媒质的厚度各为多少？（注意：这里的入射光强与透射光强都已经考虑到媒质表面的反射，也即解题过程中只考虑吸收）
+\label{q:200:start}
+\answerarea[7.0cm]
+\label{q:200:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 一块光学玻璃对水银灯蓝、绿谱线$435.8\,\mathrm{nm}$和$546.1\,\mathrm{nm}$的折射率分别是 1.65250 和1.62450，用此数据定出科希公式中的 A、B 两常数，并用它计算此光学玻璃对钠黄光$589.3\,\mathrm{nm}$的折射率以及色散率$dn/d\lambda$。
+\label{q:201:start}
+\answerarea[7.0cm]
+\label{q:201:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 考虑两列振幅相同、偏振方向相同、频率分别为$\omega +d\omega$和$\omega -d\omega$的线偏振平面波，它们都沿 z 轴方向传播，求合成波及波的相位传播速度和振幅传播速度。
+\label{q:202:start}
+\answerarea[7.0cm]
+\label{q:202:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 设方位角为$\theta$的斜椭圆偏振光在坐标轴上的分量分别为 Ex、Ey，其对应振幅为$a_{1}$、$a_{2}$，且 Ex 相对于 Ey 的相位差为$\delta$，试求在方向的光强。
+\label{q:203:start}
+\answerarea[7.0cm]
+\label{q:203:end}
+\end{qitems}
+
+\section{第九章\quad 光的干涉和干涉系统}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 不是干涉所必须的条件是
+\par\noindent\hspace{2em}\ding{172}两列光波的频率相同。
+\par\noindent\hspace{2em}\ding{173}两列光波的初相位相同。
+\par\noindent\hspace{2em}\ding{174}两列光波的振动方向相同。
+\par\noindent\hspace{2em}\ding{175}两列光波的光程差小于波列长度。
+\label{q:204:start}
+\answerarea[4.0cm]
+\label{q:204:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 在杨氏干涉实验中
+\par\noindent\hspace{2em}\ding{172}干涉条纹是垂直于双孔连线方向的等间隔直条纹。
+\par\noindent\hspace{2em}\ding{173}若照明光波长增大，则条纹间隔变小。
+\par\noindent\hspace{2em}\ding{174}若两孔间距增大，则条纹间隔变小。
+\par\noindent\hspace{2em}\ding{175}若两孔到屏之间的距离增大，则条纹间隔变小。
+\label{q:205:start}
+\answerarea[4.0cm]
+\label{q:205:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 在杨氏干涉实验中，满足亮条纹的条件是
+\par\noindent\hspace{2em}\ding{172}$\delta =(2m+1)\pi$，（$m=0$，$\pm 1$，$\pm 2$，…）
+\par\noindent\hspace{2em}\ding{173}$\Delta =m\lambda$，（$m=0$，$\pm 1$，$\pm 2$，…）
+\par\noindent\hspace{2em}\ding{174}$x=m\lambda D/d$，（$m=0$，$\pm 1$，$\pm 2$，…）
+\par\noindent\hspace{2em}\ding{175}$x=(m+1/2)\lambda D/d$，（$m=0$，$\pm 1$，$\pm 2$，…）
+\label{q:206:start}
+\answerarea[4.0cm]
+\label{q:206:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 下列说法中正确的是
+\par\noindent\hspace{2em}\ding{172}在面光源照明的光场中，各点（次波源）都是完全不相干的。
+\par\noindent\hspace{2em}\ding{173}在点光源照明的光场中，各点（次波源）都是完全相干的。
+\par\noindent\hspace{2em}\ding{174}在理想的单色点光源照明的光场中，各点（次波源）都是完全相干的。
+\par\noindent\hspace{2em}\ding{175}以纵向相干长度为轴，横向的相干面积为底作一柱体，其体积被称为相干体积。在相干体积内，任意两点（次波源），都有较高程度的相干性。
+\label{q:207:start}
+\answerarea[4.0cm]
+\label{q:207:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 在杨氏干涉实验中，假定光源是单色缝光源（缝与干涉屏上$S_{1}$、$S_{2}$的连线相平行）：其宽度刚好等于允许宽度$b_{0}$，判断以下说法的正确性：
+\par\noindent\hspace{2em}\ding{172}当光源缝向双缝移近时，干涉条纹无变化。
+\par\noindent\hspace{2em}\ding{173}将整个装置放入水中时，干涉条纹的间隔变小。
+\par\noindent\hspace{2em}\ding{174}当光源缝的宽度增大时，干涉条纹无变化。
+\par\noindent\hspace{2em}\ding{175}当观察屏移离双缝时，条纹的间隔增大。
+\label{q:208:start}
+\answerarea[4.0cm]
+\label{q:208:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 干涉实验中，光源的允许宽度
+\par\noindent\hspace{2em}\ding{172}是光源临界宽度的$1/4$。
+\par\noindent\hspace{2em}\ding{173}随照明波长的增大而增大。
+\par\noindent\hspace{2em}\ding{174}随干涉孔径角的增大而增大。
+\par\noindent\hspace{2em}\ding{175}可保证可见度$K=0.8$。
+\label{q:209:start}
+\answerarea[4.0cm]
+\label{q:209:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 平行平板的双光束干涉形成圆条纹时
+\par\noindent\hspace{2em}\ding{172}属于等厚干涉。
+\par\noindent\hspace{2em}\ding{173}其干涉条纹为等间隔同心圆环。
+\par\noindent\hspace{2em}\ding{174}圆环的中央级次较高，边缘的级次较低。
+\par\noindent\hspace{2em}\ding{175}平板越厚，条纹越密。
+\label{q:210:start}
+\answerarea[4.0cm]
+\label{q:210:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 用扩展光源照射平行平板
+\par\noindent\hspace{2em}\ding{172}会形成定域干涉条纹，且定域面在无穷远处。
+\par\noindent\hspace{2em}\ding{173}平板越厚，中心条纹的干涉级次越高。
+\par\noindent\hspace{2em}\ding{174}反射场和透射场的干涉条纹相同。
+\par\noindent\hspace{2em}\ding{175}入射光波长越长，条纹间隔越稀。
+\label{q:211:start}
+\answerarea[4.0cm]
+\label{q:211:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 若想观察到非定域干涉条纹，则首选
+\par\noindent\hspace{2em}\ding{172}单色扩展光源
+\par\noindent\hspace{2em}\ding{173}单色点光源
+\par\noindent\hspace{2em}\ding{174}白光扩展光源
+\par\noindent\hspace{2em}\ding{175}白光点光源
+\label{q:212:start}
+\answerarea[4.0cm]
+\label{q:212:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 在楔形平板的双光束干涉中
+\par\noindent\hspace{2em}\ding{172}楔角越小，条纹间隔越宽。
+\par\noindent\hspace{2em}\ding{173}楔角一定时，照射波长越长，条纹间隔越宽。
+\par\noindent\hspace{2em}\ding{174}局部高度变化越大，条纹变形越严重。
+\par\noindent\hspace{2em}\ding{175}将该楔板叠放在另一材料相同的平行平板之上时，干涉条纹的间隔不变。
+\label{q:213:start}
+\answerarea[4.0cm]
+\label{q:213:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 楔形平板的干涉是定域干涉，将形成定域干涉条纹
+\par\noindent\hspace{2em}\ding{172}当照射光线垂直于楔板照射时，其定域条纹位于楔板内部。
+\par\noindent\hspace{2em}\ding{173}当照明光源与楔板的棱各在一方时，其定域条纹位于楔板下方。
+\par\noindent\hspace{2em}\ding{174}楔板的楔角越小，定域条纹离楔板越远。
+\par\noindent\hspace{2em}\ding{175}楔板的厚度越小，定域条纹离楔板越远。
+\label{q:214:start}
+\answerarea[4.0cm]
+\label{q:214:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 在一个由两块玻璃平板构成的空气楔内放置了三个大小相近的滚珠，当用激光垂直照射时，得到如图 9-16 所示干涉条纹，当用手轻压 D 处时，条纹间隔变大，则 A、B、C 球的直径大小关系是
+\par\noindent\hspace{2em}\ding{172}$r_{A}>r_{B}>r_{C}$
+\par\noindent\hspace{2em}\ding{173}$r_{A}=r_{B}<r_{C}$
+\par\noindent\hspace{2em}\ding{174}$r_{A}=r_{B}>r_{C}$
+\par\noindent\hspace{2em}\ding{175}$r_{A}<r_{B}<r_{C}$
+\imgin[0.25]{}{figures/fig-023.jpg}
+\label{q:215:start}
+\answerarea[1.6cm]
+\label{q:215:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 将一金属细丝置于两块玻璃平板之间，构成如图 9-17 所示的结构。垂直向下观察可见干涉条纹。当在 A 点施加一个均匀增加的力 F 时
+\par\noindent\hspace{2em}\ding{172}条纹间隔逐渐增大。
+\par\noindent\hspace{2em}\ding{173}条纹数量逐渐减少。
+\par\noindent\hspace{2em}\ding{174}条纹向右逐渐移出。
+\par\noindent\hspace{2em}\ding{175}条纹向级次低的方向移动。
+\imgin[0.31]{}{figures/fig-024.jpg}
+\label{q:216:start}
+\answerarea[1.6cm]
+\label{q:216:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 将一个平凹透镜以凹面向下放在一标准平面上，向下观察可见干涉条纹。若在透镜上轻施一力 F 时，看到
+\par\noindent\hspace{2em}\ding{172}干涉条纹向中心移动。
+\par\noindent\hspace{2em}\ding{173}中心处的条纹级次低于边缘处的级次。
+\par\noindent\hspace{2em}\ding{174}条纹间隔增大。
+\par\noindent\hspace{2em}\ding{175}条纹数量减少。
+\label{q:217:start}
+\answerarea[4.0cm]
+\label{q:217:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 在牛顿环装置中，若用平行光垂直照明，则当透镜凸面与平板间距缩小时，条纹将
+\par\noindent\hspace{2em}\ding{172}向外扩展。
+\par\noindent\hspace{2em}\ding{173}向中心收缩。
+\par\noindent\hspace{2em}\ding{174}不受影响。
+\par\noindent\hspace{2em}\ding{175}条纹间隔增大。
+\label{q:218:start}
+\answerarea[4.0cm]
+\label{q:218:end}
+\end{qitems}
+
+\begin{qitems}[startnum=16]
+\qitem 在迈克耳逊干涉仪中，若照明采用扩展白光源，则
+\par\noindent\hspace{2em}\ding{172}有可能看到干涉条纹。
+\par\noindent\hspace{2em}\ding{173}不可能看到干涉条纹。
+\par\noindent\hspace{2em}\ding{174}无法获得零级白光条纹。
+\par\noindent\hspace{2em}\ding{175}可以通过移动动镜 M 的位置补偿光程，从而获得零级白光条纹。
+\label{q:219:start}
+\answerarea[4.0cm]
+\label{q:219:end}
+\end{qitems}
+
+\begin{qitems}[startnum=17]
+\qitem 平板的多光束干涉
+\par\noindent\hspace{2em}\ding{172}形成条件是在平板的表面镀增透膜。
+\par\noindent\hspace{2em}\ding{173}透射场的特点是在全暗的背景上得到极细锐的亮纹。
+\par\noindent\hspace{2em}\ding{174}膜层的透过率越高，透射场亮纹越细锐。
+\par\noindent\hspace{2em}\ding{175}透射场亮纹的光强等于入射光强。
+\label{q:220:start}
+\answerarea[4.0cm]
+\label{q:220:end}
+\end{qitems}
+
+\begin{qitems}[startnum=18]
+\qitem 平行平板干涉中，当平板的反射率很高时（不考虑吸收影响），若相邻光束之光程差为波长的整数倍时，则
+\par\noindent\hspace{2em}\ding{172}反射光强等于入射光强。
+\par\noindent\hspace{2em}\ding{173}透射光强等于入射光强。
+\par\noindent\hspace{2em}\ding{174}反射光强随表面反射率的增大而增大。
+\par\noindent\hspace{2em}\ding{175}透射光强随表面反射率的增大而增大。
+\label{q:221:start}
+\answerarea[4.0cm]
+\label{q:221:end}
+\end{qitems}
+
+\begin{qitems}[startnum=19]
+\qitem 法布里-珀罗干涉仪有如下特点
+\par\noindent\hspace{2em}\ding{172}基本工作原理是平板的多光束干涉。
+\par\noindent\hspace{2em}\ding{173}其主要用途是进行光谱超精细结构的研究。
+\par\noindent\hspace{2em}\ding{174}其高分辨率主要取决于较高的干涉级次。
+\par\noindent\hspace{2em}\ding{175}它的自由光谱区范围很大。
+\label{q:222:start}
+\answerarea[4.0cm]
+\label{q:222:end}
+\end{qitems}
+
+\begin{qitems}[startnum=20]
+\qitem 镀于玻璃表面的单层增透膜，选用膜层材料的折射率应该
+\par\noindent\hspace{2em}\ding{172}大于玻璃折射率。
+\par\noindent\hspace{2em}\ding{173}等于玻璃折射率。
+\par\noindent\hspace{2em}\ding{174}介于玻璃折射率和空气折射率之间。
+\par\noindent\hspace{2em}\ding{175}小于空气折射率。
+\label{q:223:start}
+\answerarea[4.0cm]
+\label{q:223:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 形成干涉现象的基本条件是（\hspace{1.6em}）。
+\label{q:224:start}
+\answerarea[4.0cm]
+\label{q:224:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 平板干涉孔径角$\beta =0$的几何意义是（\hspace{1.6em}）。
+\label{q:225:start}
+\answerarea[4.0cm]
+\label{q:225:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 光源的相干长度与相干时间的关系（\hspace{1.6em}）。相干长度越长，说明光源的时间相干性（\hspace{1.6em}）。
+\label{q:226:start}
+\answerarea[4.0cm]
+\label{q:226:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 获得相干光的方法有分波前法和分振幅法，杨氏双缝干涉属于（\hspace{1.6em}），平行平板等倾干涉属于（\hspace{1.6em}）。
+\label{q:227:start}
+\answerarea[4.0cm]
+\label{q:227:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 干涉条纹可见度的定义用公式表示为（\hspace{1.6em}），其取值范围是（\hspace{1.6em}），影响可见度的因素有（\hspace{1.6em}）。
+\label{q:228:start}
+\answerarea[4.0cm]
+\label{q:228:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 在杨氏干涉系统中，当观察屏位于两相干点源连线的等分线的远方且垂直于该等分线时，屏上的条纹为（\hspace{1.6em}）；当观察屏垂直于两相干点源的连线时，屏上的条纹为一组（\hspace{1.6em}）。
+\label{q:229:start}
+\answerarea[4.0cm]
+\label{q:229:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 多光束干涉常采用（\hspace{1.6em}）干涉结构，因为其条纹为（\hspace{1.6em}），利用多光束干涉原理工作的典型仪器是（\hspace{1.6em}）。
+\label{q:230:start}
+\answerarea[4.0cm]
+\label{q:230:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 在杨氏干涉实验中，双缝间距$1\,\mathrm{mm}$，离观察屏$1m$，用钠光灯做光源，它发出两种波长的单色光$\lambda_{1}=589.0\,\mathrm{nm}$和$\lambda_{2}=589.6\,\mathrm{nm}$，则两种单色光的第 10 级亮条纹之间的间距为（\hspace{1.6em}）。
+\label{q:231:start}
+\answerarea[4.0cm]
+\label{q:231:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 当一透明塑料薄膜置于杨氏干涉装置的某一狭缝后，对应白光条纹系的中心亮条纹发生了 4 个条纹的位移。材料的折射率为 1.480，光的有效波长为$550\,\mathrm{nm}$，则薄膜增加的光程差是（\hspace{1.6em}）mm，薄膜的厚度是（\hspace{1.6em}）mm。
+\label{q:232:start}
+\answerarea[4.0cm]
+\label{q:232:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 一个点光源（设$\lambda =550\,\mathrm{nm}$）照明某一杨氏干涉装置中，若干涉装置的干涉孔径角为$1.25\times 10^{-3}\,\mathrm{rad}$，则点光源允许的最大尺寸为（\hspace{1.6em}）mm。
+\label{q:233:start}
+\answerarea[4.0cm]
+\label{q:233:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 若两列相干光波的振幅比是 1：3，干涉条纹的可见度为（\hspace{1.6em}）。
+\label{q:234:start}
+\answerarea[4.0cm]
+\label{q:234:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 某一光源发射中心波长为$600\,\mathrm{nm}$的光波，原子发射时间是$10^{-8}s$，则光源发出光波的波长宽度为（\hspace{1.6em}）nm。
+\label{q:235:start}
+\answerarea[4.0cm]
+\label{q:235:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 迈克耳逊干涉仪的反射镜 M 移动$0.233\,\mathrm{mm}$时，条纹被吞没了 792 条，则照射光源的波长为（\hspace{1.6em}）nm。
+\label{q:236:start}
+\answerarea[4.0cm]
+\label{q:236:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 一束波长为$\lambda$的单色光从空气垂直入射到折射率为 n 的透明膜中，要使反射光加强，膜的厚度至少为（\hspace{1.6em}）。
+\label{q:237:start}
+\answerarea[4.0cm]
+\label{q:237:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 有一干涉滤光片间隔层的厚度为$2\times 10^{-4}\,\mathrm{mm}$，折射率为 1.5，求正入射时滤光片在可见光区域内的中心波长（\hspace{1.6em}）。
+\label{q:238:start}
+\answerarea[4.0cm]
+\label{q:238:end}
+\end{qitems}
+
+\begin{qitems}[startnum=16]
+\qitem 用波长为$660\,\mathrm{nm}$的单色光垂直照射一玻璃楔时，发现干涉条纹出现局部弯曲，测得此时$\Delta e=\lambda /5$。设玻璃的折射率为 1.5，则玻璃楔的局部厚度变化为（\hspace{1.6em}）nm。
+\label{q:239:start}
+\answerarea[4.0cm]
+\label{q:239:end}
+\end{qitems}
+
+\begin{qitems}[startnum=17]
+\qitem 利用等厚干涉条纹测量楔角时，所用光波波长$\lambda =600\,\mathrm{nm}$，已知楔板材料的折射率$n=1.52$，在长$5\,\mathrm{cm}$的范围内刚好有 15 个条纹间隔，则楔角的大小为（\hspace{1.6em}）rad。
+\label{q:240:start}
+\answerarea[4.0cm]
+\label{q:240:end}
+\end{qitems}
+
+\begin{qitems}[startnum=18]
+\qitem 若把牛顿环装置（都是用折射率为 1.52 的玻璃制成的）由空气搬入折射率为 1.33 的水中，则干涉条纹会（\hspace{1.6em}）。
+\label{q:241:start}
+\answerarea[4.0cm]
+\label{q:241:end}
+\end{qitems}
+
+\begin{qitems}[startnum=19]
+\qitem 两平板玻璃一端相接，距此$20\,\mathrm{cm}$处夹一直径$0.05\,\mathrm{mm}$的细丝，当用波长为$589\,\mathrm{nm}$的光波垂直照射时，相邻暗纹的间距为（\hspace{1.6em}）mm。
+\label{q:242:start}
+\answerarea[4.0cm]
+\label{q:242:end}
+\end{qitems}
+
+\begin{qitems}[startnum=20]
+\qitem 在两块平板玻璃 A 和 B 之间夹一小圆柱 G，形成空气劈尖。用单色光垂直照射劈尖，如图 9-18 所示。当稍稍用力下压玻璃板 A 时，干涉条纹间距（\hspace{1.6em}），条纹向（\hspace{1.6em}）移动。若使平行单色光倾斜照射玻璃板（入射角$>0$），形成的干涉条纹与垂直照射时相比，条纹间距（\hspace{1.6em}）。
+\imgin[0.23]{}{figures/fig-025.jpg}
+\label{q:243:start}
+\answerarea[1.6cm]
+\label{q:243:end}
+\end{qitems}
+
+\begin{qitems}[startnum=21]
+\qitem 有两个波长在$600\,\mathrm{nm}$附近相差$1\,\mathrm{nm}$，要用法布里-珀罗干涉仪把它们分辨开，设反射率$R=0.95$，问间隔 h 应为（\hspace{1.6em}）$\,\mathrm{\mu m}$。
+\imgin[0.23]{}{figures/fig-025.jpg}
+\label{q:244:start}
+\answerarea[1.6cm]
+\label{q:244:end}
+\end{qitems}
+
+\begin{qitems}[startnum=22]
+\qitem F-P 标准具的间隔为$2.5\,\mathrm{mm}$，对于$500\,\mathrm{nm}$的光，条纹系中心的干涉级次是（\hspace{1.6em}），如果照明光波中包含平均波长为$500\,\mathrm{nm}$的两种光波，且它们的环条纹距离为$1/100$条纹间距，则这两种光波的波长差为（\hspace{1.6em}）nm。
+\imgin[0.23]{}{figures/fig-025.jpg}
+\label{q:245:start}
+\answerarea[1.6cm]
+\label{q:245:end}
+\end{qitems}
+
+\begin{qitems}[startnum=23]
+\qitem 选择填空：对于牛顿干涉环（正入射）、Michelson 干涉圆环、Fabry-Perot 干涉圆环，分别选择：干涉条纹（a.等厚干涉；b.等倾干涉）；干涉条纹（a.非定域；b.定域在无限远；c.定域于膜表面附近）；中央条纹比边缘条纹的级次（a.高；b.低）；增加空气膜厚度条纹将（a.变细；b.变粗）；条纹中心为（a.暗；b.亮；c.不定）。
+{\small
+
+\par\vspace{2mm}
+\noindent\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{0.17\linewidth}|>{\centering\arraybackslash}p{0.17\linewidth}|>{\centering\arraybackslash}p{0.17\linewidth}|}
+\hline
+选填内容 & 牛顿干涉环（正入射） & Michelson 干涉圆环 & Fabry-Perot 干涉圆环 \\
+\hline
+a. 等厚干涉；b. 等倾干涉 & & & \\
+\hline
+干涉条纹：a. 非定域；b. 定域在无限远；c. 定域于膜表面附近 & & & \\
+\hline
+中央条纹比边缘条纹的级次：a. 高；b. 低 & & & \\
+\hline
+增加空气膜厚度条纹将：a. 变细；b. 变粗 & & & \\
+\hline
+条纹中心为：a. 暗；b. 亮；c. 不定 & & & \\
+\hline
+\end{tabularx}
+
+}
+\label{q:246:start}
+\answerarea[1.2cm]
+\label{q:246:end}
+\end{qitems}
+
+\subsection{三、问答}
+\begin{qitems}[unshow,suffix={}]
+\qitem 如图 9-19 所示，S 是一个单色点光源，M 是水平放置的平面镜，S 到 M 所在平面间的距离很近。P 为一个光屏，放置在竖直面内。试用作图法确定在光屏上能够观察到干涉现象的范围并说明理由
+\imgin[0.31]{}{figures/fig-027.jpg}
+\label{q:247:start}
+\answerarea[2.4cm]
+\label{q:247:end}
+\end{qitems}
+
+\subsection{四、计算题}
+\begin{qitems}[startnum=1]
+\qitem 三个频率相同、振幅均为 A 的平面单色波在 yOz 平面内振动，它们的磁感强度 B 方向相同，传播方向如图 9-9a 所示，它们在$z=0$平面内叠加产生干涉，试求干涉强度分布表达式和条纹可见度。
+\imgin[0.41]{}{figures/fig-028.jpg}
+\label{q:248:start}
+\answerarea[2.4cm]
+\label{q:248:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 在杨氏双缝干涉实验装置中，双缝间隔为$0.5\,\mathrm{mm}$，接收屏距双缝$1m$，点光源距离双缝$300\,\mathrm{mm}$，发射出$500\,\mathrm{nm}$的单色光，试求：（1）屏上干涉条纹的间隔。（2）若点光源由光轴向下平移$2\,\mathrm{mm}$，屏上干涉条纹向什么方向移动？移动多少距离？（3）若点光源发射出的光波为$500\pm 2.5\,\mathrm{nm}$范围内的准单色光，求屏上能够看到的干涉极大的最高级次。（4）若光源有一定的宽度，屏上干涉条纹消失时，它的临界宽度是多少？
+\label{q:249:start}
+\answerarea[7.0cm]
+\label{q:249:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 一双缝实验（参见图 9-10），波长为$\lambda$的单色光垂直入射到缝宽均为 d 的双缝上，因而在远处的屏幕上观察到干涉图样。将一块厚度为 t，折射率为 n 的薄玻璃片放在缝$S_{1}$和屏幕之间。（1）讨论$P_{0}$点的发光强度特性。（2）如果将一个缝的宽度增加到 2d，而另一个缝的宽度保持不变，$P_{0}$点的光强发生怎样的变化？（假设薄片不吸收光）。
+\label{q:250:start}
+\answerarea[7.0cm]
+\label{q:250:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 垂直入射的平面波$(\lambda =630\,\mathrm{nm})$通过折射率$n=1.5$的玻璃平板，透射光经透镜会聚到焦点上。若玻璃板的厚度沿中点 C 且垂直于图面的直线发生光波长量级的突变 d 时（参见图 9-12），焦点光强为玻璃板无突变时光强的$1/4$，问突变的最小量是多少？
+\label{q:251:start}
+\answerarea[7.0cm]
+\label{q:251:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 肥皂膜的反射光呈绿色，这时膜的法线和视线的夹角为$35^{\circ}$，试估计膜的最小厚度。（设肥皂水的折射率为 1.33，绿光的波长为$500\,\mathrm{nm}$）
+\label{q:252:start}
+\answerarea[7.0cm]
+\label{q:252:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 在如图 9-20 所示装置中，透镜焦距$f=20\,\mathrm{cm}$，照明光的波长$\lambda =600\,\mathrm{nm}$，薄膜是玻璃板（折射率$n_{0}=1.5$）上的氟化镁涂层，其厚度为$h=5.00\times 10^{-2}\,\mathrm{mm}$，折射率$n=1.38$。求（1）在反射光方向观察到的干涉圆环中心是亮点还是暗点？（2）从中心向外计算，第 5 个亮环的半径是多少？（3）第 5 个亮环处的条纹间距是多大？
+\imgin[0.17]{}{figures/fig-029.jpg}
+\label{q:253:start}
+\answerarea[2.4cm]
+\label{q:253:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 在一块平面玻璃板上放置一个曲率半径为 R 的平凸透镜，如图 9-21 所示，并把这一组合放到如图 9-14 所示系统中代替待测平行平板，以观测透镜凸表面和玻璃板平面之间空气薄层产生的牛顿条纹。
+\par\noindent （1）证明条纹间隔$e=\lambda /(2N)$，式中 N 是由中心向外计算的条纹数；$\lambda$为单色光波长。
+\par\noindent （2）若测得相距 k 个条纹的两个环半径分别为 $r_{N}$ 和 $r_{N+k}$，证明$R=(r_{N+k}^{2}-r_{N}^{2})/(k\lambda)$。
+\par\noindent （3）比较牛顿环条纹和等倾干涉圆条纹之间的异同。
+\imgin[0.29]{}{figures/fig-030.jpg}
+\label{q:254:start}
+\answerarea[2.0cm]
+\label{q:254:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 迈克耳逊干涉仪可以用来精确测量单色光波长。调整仪器，使得观察到单色光照明下的等倾圆条纹。如果把可移动臂移动了$0.03164\,\mathrm{mm}$时，条纹移动了 100 个，问单色光波长为多少？
+\label{q:255:start}
+\answerarea[7.0cm]
+\label{q:255:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem F-P 标准具的间隔为$0.25\,\mathrm{mm}$，它产生的$\lambda_{1}$谱线的干涉环系中的第 2 环和第 5 环的半径分别是$2\,\mathrm{mm}$和$3.8\,\mathrm{mm}$，$\lambda_{2}$谱系的干涉环系中第 2 环和第 5 环的半径分别是$2.1\,\mathrm{mm}$和$3.85\,\mathrm{mm}$。两谱线的平均波长为$500\,\mathrm{nm}$，求两谱线的波长差。
+\label{q:256:start}
+\answerarea[7.0cm]
+\label{q:256:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 已知汞绿线的超精细结构为$546.0753\,\mathrm{nm}$、$546.0745\,\mathrm{nm}$、$546.0734\,\mathrm{nm}$和$546.0728\,\mathrm{nm}$，它们分别属于汞的同位素 Hg198、Hg200、Hg202 和 Hg204。问：用法布里-珀罗标准具分析这结构时应如何选取标准具的间距？（设标准具面的反射比为 0.9）
+\label{q:257:start}
+\answerarea[7.0cm]
+\label{q:257:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 干涉滤光片（参见图 9-7）中，设银膜的反射率$R=0.96$，透明膜的折射率 1.55，膜厚$h=4\times 10^{-4}\,\mathrm{mm}$，平行光正入射，求：（1）可见光范围内，透射最强的谱线有几条？波长为多少？（2）每条谱线的半宽度为多少？
+\label{q:258:start}
+\answerarea[7.0cm]
+\label{q:258:end}
+\end{qitems}
+
+\section{第十章\quad 光的衍射}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 单缝的夫琅和费衍射图样
+\par\noindent\hspace{2em}\ding{172}是垂直于单缝方向的直条纹。
+\par\noindent\hspace{2em}\ding{173}每个相邻暗条纹间的距离相等。
+\par\noindent\hspace{2em}\ding{174}暗条纹间隔与入射光波的波长成正比，与缝宽成反比。
+\par\noindent\hspace{2em}\ding{175}每个相邻次极大间的距离相等。
+\label{q:259:start}
+\answerarea[4.0cm]
+\label{q:259:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 若要使单缝夫琅和费衍射条纹的间隔增大，可采取下列任一种方法：
+\par\noindent\hspace{2em}\ding{172}增大照明光源的波长。
+\par\noindent\hspace{2em}\ding{173}增大单缝宽度。
+\par\noindent\hspace{2em}\ding{174}增大准直透镜焦距。
+\par\noindent\hspace{2em}\ding{175}增大衍射屏后会聚透镜的焦距。
+\label{q:260:start}
+\answerarea[4.0cm]
+\label{q:260:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 在如图 10-11 所示的单缝夫琅和费衍射装置中，采用点光源照明
+\par\noindent\hspace{2em}\ding{172}若将衍射屏沿光轴方向移动时，则其衍射图样将会成比例放大缩小。
+\par\noindent\hspace{2em}\ding{173}若将衍射屏沿垂直于光轴方向移动时（不超出入射光束照明范围），则其衍射图样也同向移动。
+\par\noindent\hspace{2em}\ding{174}若将会聚透镜$L_{2}$沿光轴方向移动时，则其衍射图样无任何变化。
+\par\noindent\hspace{2em}\ding{175}若将会聚透镜$L_{2}$沿垂直于光轴方向移动时（不超出入射光束照明范围），则其衍射图样也同向移动。
+\imgin[0.28]{}{figures/fig-031.jpg}
+\label{q:261:start}
+\answerarea[1.6cm]
+\label{q:261:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 在如图 10-11 所示的单缝夫琅和费衍射装置中，采用点光源照明
+\par\noindent\hspace{2em}\ding{172}若沿平行于单缝方向微量平移点光源，则其衍射图样也同向移动。
+\par\noindent\hspace{2em}\ding{173}若在图面内沿垂直于单缝方向微量平移点光源，则其衍射图样也同向移动。
+\par\noindent\hspace{2em}\ding{174}若将点光源沿平行于单缝方向扩展成一线光源，则其衍射图样变明亮。
+\par\noindent\hspace{2em}\ding{175}若将点光源在图面内沿垂直于单缝方向扩展成一线光源，则其衍射图样变明亮。
+\imgin[0.28]{}{figures/fig-031.jpg}
+\label{q:262:start}
+\answerarea[1.6cm]
+\label{q:262:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 在如图 10-11 所示的单缝夫琅和费衍射装置中，采用点光源照明
+\par\noindent\hspace{2em}\ding{172}若在图面内沿垂直于单缝方向平移准直物镜，则其衍射条纹也向相同方向移动。
+\par\noindent\hspace{2em}\ding{173}若沿平行于单缝方向平移准直物镜，则其衍射条纹也向相同方向移动。
+\par\noindent\hspace{2em}\ding{174}若单缝绕光轴旋转$\theta$角，其衍射图样同向旋转相同的角度。
+\par\noindent\hspace{2em}\ding{175}若准直物镜绕光轴旋转$\theta$角，其衍射图样同向旋转相同的角度。
+\imgin[0.28]{}{figures/fig-031.jpg}
+\label{q:263:start}
+\answerarea[1.6cm]
+\label{q:263:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 在如图 10-11 所示的夫琅和费衍射装置中
+\par\noindent\hspace{2em}\ding{172}增大透镜$L_{2}$的焦距时，则位于该透镜焦面上的衍射条纹无变化。
+\par\noindent\hspace{2em}\ding{173}增大透镜$L_{2}$的口径时，则位于接收屏上的衍射条纹无变化。
+\par\noindent\hspace{2em}\ding{174}将衍射屏沿系统光轴方向前后移动，则位于接收屏上的衍射条纹无变化。
+\par\noindent\hspace{2em}\ding{175}衍射屏在图面内做垂直于单缝的移动（不超出入射光束照明范围），则位于接收屏上的衍射条纹无变化。
+\imgin[0.28]{}{figures/fig-031.jpg}
+\label{q:264:start}
+\answerarea[1.6cm]
+\label{q:264:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 在圆孔的夫琅和费衍射中
+\par\noindent\hspace{2em}\ding{172}衍射图样是间隔不等的同心圆环。
+\par\noindent\hspace{2em}\ding{173}光能量集中在中央亮斑处。
+\par\noindent\hspace{2em}\ding{174}中央亮斑的大小只与衍射圆孔的大小有关。
+\par\noindent\hspace{2em}\ding{175}中央亮斑的衍射级次最高。
+\label{q:265:start}
+\answerarea[4.0cm]
+\label{q:265:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 相同半径的一个圆盘和一个圆孔的夫琅和费衍射图样
+\par\noindent\hspace{2em}\ding{172}强度分布完全相反。
+\par\noindent\hspace{2em}\ding{173}强度分布完全相同。
+\par\noindent\hspace{2em}\ding{174}除衍射图样中心处外，强度分布相同。
+\par\noindent\hspace{2em}\ding{175}除衍射图样中心处外，强度分布相反。
+\label{q:266:start}
+\answerarea[4.0cm]
+\label{q:266:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 一衍射屏上有 4 个缝宽为 a 的缝，相邻两缝间不透光的部分为 2a，则当以波长$\lambda =\lambda_{0}$的光线正入射照明时
+\par\noindent\hspace{2em}\ding{172}最多能看到 7 条亮纹。
+\par\noindent\hspace{2em}\ding{173}此衍射屏会使 3、6、9…级缺级。
+\par\noindent\hspace{2em}\ding{174}在相邻的两个主极大间有两个次极大。
+\par\noindent\hspace{2em}\ding{175}图样中所有的亮纹宽度相等。
+\label{q:267:start}
+\answerarea[4.0cm]
+\label{q:267:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 平面透射光栅有较高的分辨本领，主要是因为
+\par\noindent\hspace{2em}\ding{172}光栅间隔极小。
+\par\noindent\hspace{2em}\ding{173}光栅缝数极多。
+\par\noindent\hspace{2em}\ding{174}衍射级次很高。
+\par\noindent\hspace{2em}\ding{175}光栅上的透光缝极窄。
+\label{q:268:start}
+\answerarea[4.0cm]
+\label{q:268:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 设一个平面透射光栅的缝宽为 a，缝间隔为 d，以波长为$\lambda$的光垂直入射。若它的缝数N 增大，则
+\par\noindent\hspace{2em}\ding{172}光栅的分辨本领提高。
+\par\noindent\hspace{2em}\ding{173}光栅衍射图样中的亮纹变细。
+\par\noindent\hspace{2em}\ding{174}两亮纹之间的间隔增大。
+\par\noindent\hspace{2em}\ding{175}缺少的亮纹级次不变。
+\label{q:269:start}
+\answerarea[4.0cm]
+\label{q:269:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 设一个平面透射光栅的缝宽为 a，缝间隔为 d，总缝数为 N，以波长为$\lambda$的光垂直入射。当光栅缝间隔 d 减小时，则
+\par\noindent\hspace{2em}\ding{172}光栅的色散本领提高，因此其分辨本领也随之提高。
+\par\noindent\hspace{2em}\ding{173}光栅衍射图样中的亮纹变细。
+\par\noindent\hspace{2em}\ding{174}两亮纹之间的间隔增大。
+\par\noindent\hspace{2em}\ding{175}缺少的亮纹级次不变。
+\label{q:270:start}
+\answerarea[4.0cm]
+\label{q:270:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 设一个平面透射光栅的缝宽为 a，缝间隔为 d，总缝数为 N，以波长为$\lambda$的光垂直入射。当光栅缝宽 a 增大时，则
+\par\noindent\hspace{2em}\ding{172}光栅的分辨本领提高。
+\par\noindent\hspace{2em}\ding{173}光栅衍射图样中的亮纹变细。
+\par\noindent\hspace{2em}\ding{174}两亮纹之间的间隔增大。
+\par\noindent\hspace{2em}\ding{175}缺少的亮纹级次改变。
+\label{q:271:start}
+\answerarea[4.0cm]
+\label{q:271:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 设线数$N_{1}=600$的光栅其零级主极大强度为 I1，在其他条件相同时，$N_{2}=1800$的光栅其零级主极大强度为 I2，则$I_{2}/I_{1}$为
+\par\noindent\hspace{2em}\ding{172}$1/3$
+\par\noindent\hspace{2em}\ding{173}$1/9$
+\par\noindent\hspace{2em}\ding{174}3
+\par\noindent\hspace{2em}\ding{175}9
+\label{q:272:start}
+\answerarea[4.0cm]
+\label{q:272:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 某元素的特征光谱中含有波长分别为$\lambda_{1}=450\,\mathrm{nm}$和$\lambda_{2}=750\,\mathrm{nm}$的光谱线，在光栅光谱中，这两种波长的谱线有重叠现象，重叠处的谱线的级数是：
+\par\noindent\hspace{2em}\ding{172}2, 3, 4, 5…
+\par\noindent\hspace{2em}\ding{173}2, 5, 8, 11…
+\par\noindent\hspace{2em}\ding{174}2, 4, 6, 8…
+\par\noindent\hspace{2em}\ding{175}3, 6, 9, 12…
+\label{q:273:start}
+\answerarea[4.0cm]
+\label{q:273:end}
+\end{qitems}
+
+\begin{qitems}[startnum=16]
+\qitem 一束平行单色光垂直入射在光栅上，当光栅常数(a+b)为下列哪种情况（a 代表每条缝的宽度，b 为不透光部分的宽度）时，$k=3$、6、9 等级次的主极大均不出现。
+\par\noindent\hspace{2em}\ding{172}$a+b=2a$
+\par\noindent\hspace{2em}\ding{173}$a+b=3a$
+\par\noindent\hspace{2em}\ding{174}$a+b=4a$
+\par\noindent\hspace{2em}\ding{175}$a+b=6a$
+\label{q:274:start}
+\answerarea[4.0cm]
+\label{q:274:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 光的衍射现象是指（\hspace{1.6em}）的现象。
+\label{q:275:start}
+\answerarea[4.0cm]
+\label{q:275:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 假如一个人在一定距离处通过丝绸手帕观看一白炽灯的灯丝，他看到中央的白丝旁有不同的颜色的灯丝，这是（\hspace{1.6em}）现象的例子。
+\label{q:276:start}
+\answerarea[4.0cm]
+\label{q:276:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 按照光源、衍射屏和观察屏之间的关系，衍射可以分成（\hspace{1.6em}）和夫琅和费衍射两类。夫琅和费衍射又称（\hspace{1.6em}），它是指（\hspace{1.6em}）的衍射。
+\label{q:277:start}
+\answerarea[4.0cm]
+\label{q:277:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 根据惠更斯-菲涅耳原理，若已知光在某时刻的波振面为 S，则 S 的前方某点 P 的发光强度决定于波振面 S 上所有面积元发出的子波各自传到 P 点的（\hspace{1.6em}）。
+\label{q:278:start}
+\answerarea[4.0cm]
+\label{q:278:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 已知物镜直径为 D，眼睛瞳孔的直径为 d，为了充分利用望远镜的分辨率，其放大率应为（\hspace{1.6em}）。
+\label{q:279:start}
+\answerarea[4.0cm]
+\label{q:279:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 一平行单色光垂直入射到光栅上，在满足$d\sin \theta =3\lambda$时，经光栅相邻两缝沿$\theta$方向衍射的两束光的光程差为（\hspace{1.6em}），此时在$\theta$方向上得到的条纹级次为（\hspace{1.6em}），经第 1 缝和第 n 缝衍射的两束光的光程差为（\hspace{1.6em}）。
+\label{q:280:start}
+\answerarea[4.0cm]
+\label{q:280:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 在不透明细丝的夫琅和费衍射图样中，测得暗条纹的间距是$1.5\,\mathrm{mm}$，所用透镜的焦距为$50\,\mathrm{mm}$，光波波长为$632.8\,\mathrm{nm}$，则细丝的直径为（\hspace{1.6em}）。
+\label{q:281:start}
+\answerarea[4.0cm]
+\label{q:281:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 在夫琅和费单缝衍射实验中，以钠黄光（波长为$589\,\mathrm{nm}$）垂直入射，若缝宽为$0.1\,\mathrm{mm}$，则第一级极小出现在（\hspace{1.6em}）弧度的方向上。
+\label{q:282:start}
+\answerarea[4.0cm]
+\label{q:282:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 若要分辨角间隔为$0.05''$的两颗星，需要望远镜的口径至少为（\hspace{1.6em}）。
+\label{q:283:start}
+\answerarea[4.0cm]
+\label{q:283:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 用$1\,\mathrm{mm}$内有 500 条刻痕的平面透射光栅观察钠光谱$(\lambda =0.589\,\mathrm{\mu m})$，当光线以$30^{\circ}$入射时，最多能看到（\hspace{1.6em}）条光谱线。
+\label{q:284:start}
+\answerarea[4.0cm]
+\label{q:284:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 要使 50 线$/mm$的光栅在第 2 级光谱中能分辨钠双线$\lambda_{1}=589\,\mathrm{nm}$和$\lambda_{2}=589.6\,\mathrm{nm}$，光栅的宽度应选（\hspace{1.6em}）。
+\label{q:285:start}
+\answerarea[4.0cm]
+\label{q:285:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 一束准直的单色光正入射到一个直径为$1\,\mathrm{cm}$的会聚透镜，透镜焦距为$50\,\mathrm{cm}$，光波波长$\lambda =546\,\mathrm{nm}$，则透镜焦平面上衍射图样中央亮斑的直径是（\hspace{1.6em}）。
+\label{q:286:start}
+\answerarea[4.0cm]
+\label{q:286:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 在白光形成的单缝夫琅和费衍射图样中，某色光波的第三级极大与$600\,\mathrm{nm}$的第二级极大重合，该色波的波长是（\hspace{1.6em}）。
+\label{q:287:start}
+\answerarea[4.0cm]
+\label{q:287:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 若双缝夫琅和费衍射的中央峰恰好含有 11 条干涉亮纹，那么缝宽和缝间距的比为（\hspace{1.6em}）。
+\label{q:288:start}
+\answerarea[4.0cm]
+\label{q:288:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 已知闪耀光栅的闪耀角为$15^{\circ}$，光栅常数$d=1\,\mathrm{\mu m}$，平行光垂直于光栅平面入射时在一级光谱处得到最大光强，则入射光的波长为（\hspace{1.6em}）nm。
+\label{q:289:start}
+\answerarea[4.0cm]
+\label{q:289:end}
+\end{qitems}
+
+\subsection{三、计算题}
+\begin{qitems}[startnum=1]
+\qitem 观察强度为 I0 的平行光照射一个矩孔（其宽为 a，长为 b）所产生的夫琅和费衍射图样。求沿着图样对角线方向上的第一级和第二级极大的发光强度。
+\label{q:290:start}
+\answerarea[7.0cm]
+\label{q:290:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 平行的白光（波长范围为 390～$700\,\mathrm{nm}$）垂直照射到平行的双缝上，双缝相距$1\,\mathrm{mm}$，用一个焦距$f=1m$的透镜将双缝的衍射图样聚焦在屏幕上。若在屏幕上距中央白色条纹$3\,\mathrm{mm}$处开一个小孔，在该处检查透过小孔的光，问将缺少哪些波长？
+\label{q:291:start}
+\answerarea[7.0cm]
+\label{q:291:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 钠黄光垂直照射某光栅，其第二级光谱恰好可以分辨钠光双线（$\lambda_{1}=0.5890\,\mathrm{\mu m}$，$\lambda_{2}=0.5896\,\mathrm{\mu m}$），并测得$\lambda_{1}$的第二级光谱线所对应的衍射角为$2.5^{\circ}$，第三级缺级，试求该光栅的总缝数 N、光栅常数 d 和缝宽 a。
+\label{q:292:start}
+\answerarea[7.0cm]
+\label{q:292:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 设计一块光栅，要求\ding{172}使波长$\lambda =600\,\mathrm{nm}$的第三级谱线的衍射角$30^{\circ}$；\ding{173}色散尽可能大；
+\par\noindent\hspace{2em}\ding{174}第 4 级谱线缺级；\ding{175}对波长$\lambda =600\,\mathrm{nm}$的第三级谱线能分辨$0.02\,\mathrm{nm}$的波长差。在选定光栅的参数后，问在透镜的焦面上只可能看到波长$600\,\mathrm{nm}$的几条谱线？
+\label{q:293:start}
+\answerarea[7.0cm]
+\label{q:293:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 一块光栅的宽度为$100\,\mathrm{mm}$，每毫米内有 500 条缝，光栅后面放置的透镜焦距为$500\,\mathrm{mm}$。问：（1）它产生的波长$\lambda =632.8\,\mathrm{nm}$的单色光的 1 级和 2 级谱线的半宽度是多少？（2）若入射光线是波长为$632.8\,\mathrm{nm}$和波长与之相差$0.5\,\mathrm{nm}$的两种单色光，它们的 1 级和 2 级谱线之间的距离是多少？
+\label{q:294:start}
+\answerarea[7.0cm]
+\label{q:294:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 有一个多缝衍射屏（参见图 10-9），缝数为 2N，缝宽为 a，缝间不透明部分的宽度依次为 a 和 3a。试求在下列各种情况下夫琅和费衍射强度分布公式：（1）遮住偶数缝。（2）遮住奇数缝。（3）全放开。
+\imgin[0.25]{}{figures/fig-035.jpg}
+\label{q:295:start}
+\answerarea[2.4cm]
+\label{q:295:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 有三条平行狭缝，宽度均为 a，缝距分别为 d 和 2d，如图 10-12 所示。求正入射时其夫琅和费衍射强度分布公式。
+\imgin[0.22]{}{figures/fig-036.jpg}
+\label{q:296:start}
+\answerarea[2.4cm]
+\label{q:296:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 两条平行狭缝，缝宽分别是 a 和 2a，缝距是$d=3a$，如图 10-13 所示。求正入射时其夫琅和费衍射强度分布公式。
+\imgin[0.23]{}{figures/fig-037.jpg}
+\label{q:297:start}
+\answerarea[2.4cm]
+\label{q:297:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 斜入射时多缝夫琅和费衍射的光强是如何分布的？如图 10-14 所示，设$\theta$为入射光线与光轴的夹角。
+\imgin[0.21]{}{figures/fig-038.jpg}
+\label{q:298:start}
+\answerarea[2.4cm]
+\label{q:298:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 一块每毫米 1000 个刻槽的反射闪耀光栅，以平行光垂直于槽面入射，一级闪耀波长为$546\,\mathrm{nm}$。问：（1）光栅的闪耀角多大？（2）若不考虑缺级，有可能看到$546\,\mathrm{nm}$的几级光谱？（3）各级光谱的衍射角是多少？
+\label{q:299:start}
+\answerarea[7.0cm]
+\label{q:299:end}
+\end{qitems}
+
+\section{第十一章\quad 光的偏振和晶体光学基础}
+\subsection{一、多重选择题（答案可能不止 1 个）}
+\begin{qitems}[startnum=1]
+\qitem 在以下 4 种情况中为部分偏振光的是
+\par\noindent\hspace{2em}\ding{172}经玻璃窗反射的太阳光。
+\par\noindent\hspace{2em}\ding{173}迎着入射方向观察天空的散射光。
+\par\noindent\hspace{2em}\ding{174}白云散射的光。
+\par\noindent\hspace{2em}\ding{175}月光。
+\label{q:300:start}
+\answerarea[4.0cm]
+\label{q:300:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 在白纸上画一个黑点，上面放一块冰洲石观察其像，
+\par\noindent\hspace{2em}\ding{172}一定能够看到两个淡灰色的点像。
+\par\noindent\hspace{2em}\ding{173}若能够看到两个淡灰色的点像，则其中一个像的位置比实际物体要上浮一些。
+\par\noindent\hspace{2em}\ding{174}在看到两个点像的情况下，在纸面上旋转冰洲石，则总是位置靠上的那个像点跟着一起旋转。
+\par\noindent\hspace{2em}\ding{175}在看到两个点像的情况下，在纸面上旋转冰洲石，则由 e 光折射引起的那个像点会跟着一起旋转。
+\label{q:301:start}
+\answerarea[4.0cm]
+\label{q:301:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 一线偏振光通过$\lambda /4$波片后，其偏振态为
+\par\noindent\hspace{2em}\ding{172}仍为线偏光。
+\par\noindent\hspace{2em}\ding{173}变为圆偏光。
+\par\noindent\hspace{2em}\ding{174}变为椭圆偏光。
+\par\noindent\hspace{2em}\ding{175}不确定。
+\label{q:302:start}
+\answerarea[4.0cm]
+\label{q:302:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 一圆偏振光通过$\lambda /4$波片后，其偏振态为
+\par\noindent\hspace{2em}\ding{172}仍为圆偏光。
+\par\noindent\hspace{2em}\ding{173}变为线偏光。
+\par\noindent\hspace{2em}\ding{174}变为椭圆偏光。
+\par\noindent\hspace{2em}\ding{175}不确定。
+\label{q:303:start}
+\answerarea[4.0cm]
+\label{q:303:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 一束自然光通过$\lambda /4$波片后，其偏振态为
+\par\noindent\hspace{2em}\ding{172}圆偏光。
+\par\noindent\hspace{2em}\ding{173}线偏光。
+\par\noindent\hspace{2em}\ding{174}椭圆偏光。
+\par\noindent\hspace{2em}\ding{175}自然光。
+\label{q:304:start}
+\answerarea[4.0cm]
+\label{q:304:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 一线偏振光通过$\lambda /2$波片后，其偏振态为
+\par\noindent\hspace{2em}\ding{172}仍为线偏光。
+\par\noindent\hspace{2em}\ding{173}变为圆偏光。
+\par\noindent\hspace{2em}\ding{174}变为椭圆偏光。
+\par\noindent\hspace{2em}\ding{175}不确定。
+\label{q:305:start}
+\answerarea[4.0cm]
+\label{q:305:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 在波片中
+\par\noindent\hspace{2em}\ding{172}快轴方向始终与光轴方向平行。
+\par\noindent\hspace{2em}\ding{173}快轴方向始终与光轴方向垂直。
+\par\noindent\hspace{2em}\ding{174}快轴方向始终平行于波片表面。
+\par\noindent\hspace{2em}\ding{175}快轴方向始终垂直于光波的波矢方向。
+\label{q:306:start}
+\answerarea[4.0cm]
+\label{q:306:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 在波片中
+\par\noindent\hspace{2em}\ding{172}快轴是指传播速度较快的 o 光或 e 光的传播方向。
+\par\noindent\hspace{2em}\ding{173}快轴是指传播速度较快的 o 光或 e 光的振动方向。
+\par\noindent\hspace{2em}\ding{174}快轴是指传播速度较快的 o 光或 e 光的光矢量方向。
+\par\noindent\hspace{2em}\ding{175}快轴是指波片的光轴方向。
+\label{q:307:start}
+\answerarea[4.0cm]
+\label{q:307:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 用负单轴晶体制成的波片，其快轴
+\par\noindent\hspace{2em}\ding{172}平行于光轴。
+\par\noindent\hspace{2em}\ding{173}垂直于光轴。
+\par\noindent\hspace{2em}\ding{174}平行于波片表面。
+\par\noindent\hspace{2em}\ding{175}垂直于入射平面。
+\label{q:308:start}
+\answerarea[4.0cm]
+\label{q:308:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 用正单轴晶体制成的波片，其快轴
+\par\noindent\hspace{2em}\ding{172}平行于光轴。
+\par\noindent\hspace{2em}\ding{173}垂直于光轴。
+\par\noindent\hspace{2em}\ding{174}平行于波片表面。
+\par\noindent\hspace{2em}\ding{175}垂直于入射平面。
+\label{q:309:start}
+\answerarea[4.0cm]
+\label{q:309:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 可以用矩阵形式表示的光有
+\par\noindent\hspace{2em}\ding{172}自然光。
+\par\noindent\hspace{2em}\ding{173}偏振光。
+\par\noindent\hspace{2em}\ding{174}部分偏振光。
+\par\noindent\hspace{2em}\ding{175}所有的光。
+\label{q:310:start}
+\answerarea[4.0cm]
+\label{q:310:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 若一束波长为$\lambda$的光通过其$1/4$波片，出射光为线偏振光，则说明入射光为
+\par\noindent\hspace{2em}\ding{172}线偏光。
+\par\noindent\hspace{2em}\ding{173}圆偏光。
+\par\noindent\hspace{2em}\ding{174}椭圆偏光。
+\par\noindent\hspace{2em}\ding{175}不确定。
+\label{q:311:start}
+\answerarea[4.0cm]
+\label{q:311:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 某同学为检验自然光、圆偏振光、部分圆偏振光，在检偏器前放置一个$1/4$波片，当旋转检偏器一周时，看到光强为两亮两黑，则说明入射光为
+\par\noindent\hspace{2em}\ding{172}自然光。
+\par\noindent\hspace{2em}\ding{173}圆偏振光。
+\par\noindent\hspace{2em}\ding{174}部分圆偏振光。
+\par\noindent\hspace{2em}\ding{175}不能确定。
+\label{q:312:start}
+\answerarea[4.0cm]
+\label{q:312:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 当以布儒斯特角$\theta B$入射时，
+\par\noindent\hspace{2em}\ding{172}反射波的 s 分量为零。
+\par\noindent\hspace{2em}\ding{173}折射波的 s 分量为零。
+\par\noindent\hspace{2em}\ding{174}反射波的 p 分量为零。
+\par\noindent\hspace{2em}\ding{175}折射波的 p 分量为零。
+\label{q:313:start}
+\answerarea[4.0cm]
+\label{q:313:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 自然光透射到两片相叠的偏振片上（设偏振片是理想的），当透射光强为入射自然光强的$1/4$时，两块偏振片的透光轴夹角为
+\par\noindent\hspace{2em}\ding{172}$30^{\circ}$
+\par\noindent\hspace{2em}\ding{173}$45^{\circ}$
+\par\noindent\hspace{2em}\ding{174}$60^{\circ}$
+\par\noindent\hspace{2em}\ding{175}$36.55^{\circ}$
+\label{q:314:start}
+\answerarea[4.0cm]
+\label{q:314:end}
+\end{qitems}
+
+\subsection{二、填空题}
+\begin{qitems}[startnum=1]
+\qitem 从自然光中获得偏振光的方法有：（\hspace{1.6em}）、（\hspace{1.6em}）、（\hspace{1.6em}）和双折射方法。
+\label{q:315:start}
+\answerarea[4.0cm]
+\label{q:315:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 电气石能获得线偏振光是利用电气石对 o 光和 e 光的（\hspace{1.6em}）作用不同，这种现象称为晶体的（\hspace{1.6em}）。
+\label{q:316:start}
+\answerarea[4.0cm]
+\label{q:316:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 波片快轴的定义：（\hspace{1.6em}）。
+\label{q:317:start}
+\answerarea[4.0cm]
+\label{q:317:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 晶体的旋光现象是（\hspace{1.6em}），其规律是（\hspace{1.6em}）。
+\label{q:318:start}
+\answerarea[4.0cm]
+\label{q:318:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 渥拉斯顿棱镜的作用是（\hspace{1.6em}），要使它获得较好的作用效果，应选用（\hspace{1.6em}）的材料制作。
+\label{q:319:start}
+\answerarea[4.0cm]
+\label{q:319:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 从尼科尔镜出射的非寻常光，入射到各向同性的均匀介质中，是否遵从折射定律（\hspace{1.6em}）。
+\label{q:320:start}
+\answerarea[4.0cm]
+\label{q:320:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 在方解石晶体波片中，晶体的光轴与入射表面相互（\hspace{1.6em}），与晶体的快轴相互（\hspace{1.6em}），与晶体的慢轴相互（\hspace{1.6em}）。
+\label{q:321:start}
+\answerarea[4.0cm]
+\label{q:321:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 偏振度的定义是（\hspace{1.6em}），其取值范围是（\hspace{1.6em}），椭圆偏振光的偏振度为（\hspace{1.6em}）。
+\label{q:322:start}
+\answerarea[4.0cm]
+\label{q:322:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 若圆偏光中电矢量的大小为 A，它的光强是（\hspace{1.6em}）；当该圆偏光经过一个偏振片后，它的光强变为（\hspace{1.6em}）。
+\label{q:323:start}
+\answerarea[4.0cm]
+\label{q:323:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 设$1/2$波片的快轴在 x 轴方向，入射线偏光的光矢量与快轴成$45^{\circ}$，则出射光矢量的方向为（\hspace{1.6em}）。
+\label{q:324:start}
+\answerarea[4.0cm]
+\label{q:324:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 设$1/4$波片的快轴在 x 轴方向，入射线偏光的光矢量与快轴成$45^{\circ}$，则出射光的性质为（\hspace{1.6em}），其旋向为（\hspace{1.6em}）。
+\label{q:325:start}
+\answerarea[4.0cm]
+\label{q:325:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 自然光通过两个方向相交成$60^{\circ}$的偏振片，透射光强为 I1，今在这两个偏振片之间再加入另一个偏振片，它的方向与前两个偏振片均成$30^{\circ}$，则透射光强为（\hspace{1.6em}）。
+\label{q:326:start}
+\answerarea[4.0cm]
+\label{q:326:end}
+\end{qitems}
+
+\begin{qitems}[startnum=13]
+\qitem 自然光投射到互相重叠的两个偏振片上，如果透射光的强度是透射光最大强度的$1/3$，则这两个偏振片透光轴之间的夹角为（\hspace{1.6em}）。
+\label{q:327:start}
+\answerarea[4.0cm]
+\label{q:327:end}
+\end{qitems}
+
+\begin{qitems}[startnum=14]
+\qitem 一束强度为 I 的平行自然光连续通过 4 片偏振片，它们的透光轴和 y 轴的夹角分别为$0^{\circ}$、$30^{\circ}$、$60^{\circ}$和$90^{\circ}$，则出射光强为（\hspace{1.6em}）。
+\label{q:328:start}
+\answerarea[4.0cm]
+\label{q:328:end}
+\end{qitems}
+
+\begin{qitems}[startnum=15]
+\qitem 用石英晶片做一个对钠黄光$\lambda =589.3\,\mathrm{nm}$的$1/4$波片，晶片折射率为$n_{o}=1.54424$，$n_{e}=1.55335$，则波片的最小厚度为（\hspace{1.6em}）。
+\label{q:329:start}
+\answerarea[4.0cm]
+\label{q:329:end}
+\end{qitems}
+
+\begin{qitems}[startnum=16]
+\qitem 一束光由水$(n=4/3)$射到某种玻璃中，当入射角为$50.82^{\circ}$时，反射光全偏振，则玻璃的折射率为（\hspace{1.6em}）。
+\label{q:330:start}
+\answerarea[4.0cm]
+\label{q:330:end}
+\end{qitems}
+
+\begin{qitems}[startnum=17]
+\qitem 当一束自然光以布儒斯特角入射到两种媒介的分界面上时，就偏振态来说，反射光为（\hspace{1.6em}）光，其振动方向（\hspace{1.6em}）于入射面。
+\label{q:331:start}
+\answerarea[4.0cm]
+\label{q:331:end}
+\end{qitems}
+
+\begin{qitems}[startnum=18]
+\qitem 将一石英晶片插入相互正交的两个偏振片之间，且其快轴与起偏器夹角为$45^{\circ}$时，刚好使钠黄光$\lambda =589.3\,\mathrm{nm}$能够通过检偏器，晶片折射率为$n_{o}=1.54424$，$n_{e}=1.55335$，则晶片的最小厚度为（\hspace{1.6em}）。
+\label{q:332:start}
+\answerarea[4.0cm]
+\label{q:332:end}
+\end{qitems}
+
+\begin{qitems}[startnum=19]
+\qitem 对波长为$589.3\,\mathrm{nm}$的钠黄光，石英的旋光率为$21.7^{\circ}/mm$，若将石英晶片垂直光轴切割，置于两平行偏振器之间，问石英片厚度最少为（\hspace{1.6em}）时，无光通过偏振器 2。
+\label{q:333:start}
+\answerarea[4.0cm]
+\label{q:333:end}
+\end{qitems}
+
+\begin{qitems}[startnum=20]
+\qitem 光矢量与 y 轴成$30^{\circ}$，振幅为 5 的线偏振光归一化琼斯矢量为（\hspace{1.6em}）。
+\label{q:334:start}
+\answerarea[4.0cm]
+\label{q:334:end}
+\end{qitems}
+
+\subsection{三、计算题}
+\begin{qitems}[startnum=1]
+\qitem 图 11-15 中并列放有两组偏振片，偏振片 A 透光轴沿铅直方向，偏振片 B 透光轴与铅直方向成$45^{\circ}$。（1）若沿铅垂方向振动的偏振光从左边入射，求输出光强 I。（2）若该偏振光从右边入射，I 又为多少？（设入射光强为 I0）
+\imgin[0.25]{}{figures/fig-039.jpg}
+\label{q:335:start}
+\answerarea[2.4cm]
+\label{q:335:end}
+\end{qitems}
+
+\begin{qitems}[startnum=2]
+\qitem 经尼科尔棱镜观察部分偏振光，当尼科尔棱镜由对应于极大强度的位置转过$60^{\circ}$时，光强减为一半，求光束的偏振度。
+\label{q:336:start}
+\answerarea[7.0cm]
+\label{q:336:end}
+\end{qitems}
+
+\begin{qitems}[startnum=3]
+\qitem 用 ADP（磷酸二氢铵 NH4H2PO4）晶体制成$50^{\circ}$顶角的棱镜，光轴与棱镜主截面垂直，如图 11-16 所示，$n_{o}=1.5246$，$n_{e}=1.4792$。求 o 光和 e 光的最小偏向角及其二者的差。
+\imgin[0.22]{}{figures/fig-040.jpg}
+\label{q:337:start}
+\answerarea[2.4cm]
+\label{q:337:end}
+\end{qitems}
+
+\begin{qitems}[startnum=4]
+\qitem 渥拉斯顿棱镜由方解石制成，光轴方向如图 11-17 所示。已知：寻常光折射率$n_{o}=1.658$，非寻常光折射率$n_{e}=1.486$，$\theta =15^{\circ}$，试求出射两光束的分离角度。
+\imgin[0.22]{}{figures/fig-041.jpg}
+\label{q:338:start}
+\answerarea[2.4cm]
+\label{q:338:end}
+\end{qitems}
+
+\begin{qitems}[startnum=5]
+\qitem 导出长、短轴之比为 2：1，长轴沿 y 轴的右旋和左旋椭圆偏振光的琼斯矢量，并计算两个偏振光相加的结果。
+\label{q:339:start}
+\answerarea[7.0cm]
+\label{q:339:end}
+\end{qitems}
+
+\begin{qitems}[startnum=6]
+\qitem 在两个正交偏振器之间插入一块$\lambda /2$波片，强度为 I0 的单色光通过这一系统。如果将波片绕光的传播方向旋转一周，问：（1）将看到几个光强的极大和极小值？相应的波片方位及光强数值。（2）用$\lambda /4$波片和全波片替代$\lambda /2$片，结果又如何？
+\label{q:340:start}
+\answerarea[7.0cm]
+\label{q:340:end}
+\end{qitems}
+
+\begin{qitems}[startnum=7]
+\qitem 一块厚$0.025\,\mathrm{mm}$的方解石晶片，其光轴与表面平行，放置在两正交偏振片之间。从第一偏振片出来的线偏振光垂直入射到晶片上，振动方向与晶片的光轴方向夹$45^{\circ}$。求：（1）透过第二个偏振片的光在可见光谱（400～$700\,\mathrm{nm}$）中缺少哪些波长？（2）若两偏振片的振动方向互相平行，则透射光中缺少哪些波长？假定双主折射率之差$no-n_{e}=0.172$可看作常数。
+\label{q:341:start}
+\answerarea[7.0cm]
+\label{q:341:end}
+\end{qitems}
+
+\begin{qitems}[startnum=8]
+\qitem 在两个正交偏振器之间放入相位延迟角为$\Delta$的波片，波片的光轴与起、检偏器的透光轴分别成$\alpha$、$\beta$角。利用偏振光干涉的强度表达式证明：当旋转检偏器时，从系统输出的发光强度最大值对应的$\beta$角为$\tan 2\beta =(\tan 2\alpha )\cos \Delta$。
+\label{q:342:start}
+\answerarea[7.0cm]
+\label{q:342:end}
+\end{qitems}
+
+\begin{qitems}[startnum=9]
+\qitem 巴比涅补偿器如图 11-18 所示，它由两块方解石晶体制成的光楔组成，两光楔的光轴彼此垂直。将巴比涅补偿器放在两正交线偏振器之间，且使补偿器光轴与线偏振器透光轴成$45^{\circ}$，让钠黄光$(\lambda =589.3\,\mathrm{nm})$通过这一系统。问：（1）将看到怎样的干涉条纹？（2）若补偿器两光楔的夹角$\alpha =2'$，条纹间距是多少？
+\imgin[0.22]{}{figures/fig-042.jpg}
+\label{q:343:start}
+\answerarea[2.4cm]
+\label{q:343:end}
+\end{qitems}
+
+\begin{qitems}[startnum=10]
+\qitem 由双折射晶片 C 和偏振片 P 交替放置的单色滤光器如图 11-19 所示，第一个和最后一个元件是偏振片，晶片的厚度以后者是前者两倍的关系相继递增。所有的晶体光轴都互相平行并与光的传播方向垂直，所有偏振片的透光轴均互相平行，但和晶体光轴成 45°。设滤光器共有 N 块晶体组成，试证明：滤光器总的光强透射比 $\tau$ 是 $\delta$ 的函数。即
+
+\par\vspace{2mm}
+\[
+\tau=\left(\frac{\sin^{2}N\varphi}{\sin^{2}\varphi}\right)^{2},
+\qquad
+\varphi=\frac{2\pi\,(n_{o}-n_{e})\,d}{\lambda}
+\]
+
+\imgin[0.13]{}{figures/fig-045.jpg}
+\label{q:344:start}
+\answerarea[2.4cm]
+\label{q:344:end}
+\end{qitems}
+
+\begin{qitems}[startnum=11]
+\qitem 如图 11-20 所示，在杨氏双缝实验中，光源孔后放置偏振片 P，缝$S_{1}$、$S_{2}$后放置偏振片$P_{1}$、$P_{2}$，使 P 的透光轴方向与$P_{1}$平行，与$P_{2}$成$\theta$角。求屏上干涉条纹的可见度。若去掉 P 情况又如何？
+\imgin[0.29]{}{figures/fig-046.jpg}
+\label{q:345:start}
+\answerarea[2.4cm]
+\label{q:345:end}
+\end{qitems}
+
+\begin{qitems}[startnum=12]
+\qitem 一块表面垂直于光轴的水晶片恰好抵消$10\,\mathrm{cm}$长浓度为 20\%的麦芽糖溶液对钠光偏振面所引起的旋转。对此波长水晶的旋光率$\alpha =21.75^{\circ}/mm$，麦芽糖的旋光比率$[\alpha ]=144^{\circ}\cdot dm/(g\cdot cm^{-3})$，求此水晶片的厚度。
+\label{q:346:start}
+\answerarea[7.0cm]
+\label{q:346:end}
+\end{qitems}
+
+\end{document}
